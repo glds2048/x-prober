@@ -5,6 +5,16 @@ will be documented in this file
 
 ---
 
+## 10.0.2 - 2026-08-02
+
+### Fix / 修复
+- 修复在 PHP8.5 下 curl_close() 出现的启用警告
+- Fixed the enable warning that occurred with `curl_close()` in PHP 8.5
+
+### Optimize
+- 优化 store
+- Optimize store
+
 ## 10.0.1 - 2026-07-14
 
 ### Fix / 修复
