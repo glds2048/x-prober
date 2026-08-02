@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createStore } from "@/Components/Utils/components/store/index.ts";
 
 type State = {
   activeIndex: number;
@@ -7,16 +6,9 @@ type State = {
   setActiveIndex: (activeIndex: number) => void;
   setIsOpen: (isOpen: boolean) => void;
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useNavStore = createStore<State>((set) => ({
   activeIndex: 0,
   isOpen: false,
-  setActiveIndex: (activeIndex) =>
-    set((state) => {
-      state.activeIndex = activeIndex;
-    }),
-  setIsOpen: (isOpen) =>
-    set((state) => {
-      state.isOpen = isOpen;
-    }),
-});
-export const useNavStore = create<State>()(immer(store));
+  setActiveIndex: (activeIndex) => set({ activeIndex }),
+  setIsOpen: (isOpen) => set({ isOpen }),
+}));

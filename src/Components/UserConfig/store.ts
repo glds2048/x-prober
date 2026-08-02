@@ -1,16 +1,11 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createStore } from "../Utils/components/store/index.ts";
 import type { UserConfigProps } from "./types.ts";
 
 type State = {
   pollData: UserConfigProps | null;
   setPollData: (pollData: UserConfigProps | null) => void;
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useUserConfigStore = createStore<State>((set) => ({
   pollData: null,
-  setPollData: (data) =>
-    set((state) => {
-      state.pollData = data;
-    }),
-});
-export const useUserConfigStore = create<State>()(immer(store));
+  setPollData: (pollData) => set({ pollData }),
+}));

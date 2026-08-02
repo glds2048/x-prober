@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 import type { ServerToBrowserPingItemProps } from "./types.ts";
 
 type State = {
@@ -16,7 +15,7 @@ type State = {
   setServerToBrowserPingItems: (items: ServerToBrowserPingItemProps[]) => void;
   addServerToBrowserPingItem: (item: ServerToBrowserPingItemProps) => void;
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const usePingStore = createImmerStore<State>((set) => ({
   addServerToBrowserPingItem: (item) =>
     set((state) => {
       state.serverToBrowserPingItems.push(item);
@@ -47,5 +46,4 @@ const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
     set((state) => {
       state.serverToServerPingItems = items;
     }),
-});
-export const usePingStore = create<State>()(immer(store));
+}));

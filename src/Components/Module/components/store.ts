@@ -1,10 +1,9 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
 import {
   DEFAULT_MODULE_PRIORITES,
   getStorageModulePriorities,
   setStorageModulePriorities,
 } from "@/Components/Module/components/priority.ts";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 
 type State = {
   priorities: string[];
@@ -13,7 +12,7 @@ type State = {
   moveDown: (id: string) => void;
 };
 
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => {
+export const useModuleStore = createImmerStore<State>((set) => {
   const storagModulePriorities = getStorageModulePriorities();
   const initPriorities: string[] = DEFAULT_MODULE_PRIORITES.toSorted((a, b) => {
     const index1 = storagModulePriorities.indexOf(a);
@@ -54,6 +53,4 @@ const store: StateCreator<State, [["zustand/immer", never]]> = (set) => {
         setStorageModulePriorities(ids);
       }),
   };
-};
-
-export const useModuleStore = create<State>()(immer(store));
+});

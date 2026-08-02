@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createStore } from "@/Components/Utils/components/store/index.ts";
 import type { PhpInfoPollDataProps } from "./types.ts";
 
 type State = {
@@ -8,16 +7,9 @@ type State = {
   setPollData: (pollData: PhpInfoPollDataProps | null) => void;
   setLatestPhpVersion: (latestPhpVersion: string) => void;
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const usePhpInfoStore = createStore<State>((set) => ({
   latestPhpVersion: "",
   pollData: null,
-  setLatestPhpVersion: (version) =>
-    set((state) => {
-      state.latestPhpVersion = version;
-    }),
-  setPollData: (data) =>
-    set((state) => {
-      state.pollData = data;
-    }),
-});
-export const usePhpInfoStore = create<State>()(immer(store));
+  setLatestPhpVersion: (latestPhpVersion) => set({ latestPhpVersion }),
+  setPollData: (pollData) => set({ pollData }),
+}));

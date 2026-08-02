@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 import type { ServerBenchmarkProps } from "./types.ts";
 
 type State = {
@@ -14,7 +13,7 @@ type State = {
     server: ServerBenchmarkProps
   ) => void;
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useServerBenchmarkStore = createImmerStore<State>((set) => ({
   benchmarking: false,
   maxMarks: 0,
   servers: [],
@@ -38,5 +37,4 @@ const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
     set((state) => {
       state.servers = servers;
     }),
-});
-export const useServerBenchmarkStore = create<State>()(immer(store));
+}));

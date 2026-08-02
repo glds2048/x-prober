@@ -1,18 +1,14 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 
 type State = {
   isOpen: boolean;
   msg: string;
-  timerId: number | null;
+  timerId: NodeJS.Timeout | null;
   setMsg: (msg: string) => void;
   open: (msg?: string) => void;
   close: (delaySeconds?: number) => void;
 };
-const createStore: StateCreator<State, [["zustand/immer", never]]> = (
-  set,
-  get
-) => ({
+export const useToastStore = createImmerStore<State>((set, get) => ({
   close: (delaySeconds = 0) => {
     const currentTimerId = get().timerId;
     if (currentTimerId) {
@@ -51,5 +47,4 @@ const createStore: StateCreator<State, [["zustand/immer", never]]> = (
       state.msg = msg;
     }),
   timerId: null,
-});
-export const useToastStore = create<State>()(immer(createStore));
+}));

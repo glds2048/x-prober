@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 import type { BrowserBenchmarkProps } from "./types.ts";
 
 type State = {
@@ -14,7 +13,7 @@ type State = {
     item: BrowserBenchmarkProps
   ) => void;
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useBrowserBenchmarkStore = createImmerStore<State>((set) => ({
   benchmarking: false,
   browsers: [],
   maxMarks: 0,
@@ -38,5 +37,4 @@ const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
     set((state) => {
       state.maxMarks = maxMarks;
     }),
-});
-export const useBrowserBenchmarkStore = create<State>()(immer(store));
+}));

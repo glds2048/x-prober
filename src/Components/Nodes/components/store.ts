@@ -1,6 +1,5 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
 import { isDeepEqual } from "@/Components/Utils/components/is-deep-equal/index.ts";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 import type { NodesItemProps, NodesPollDataProps } from "./types.ts";
 
 type State = {
@@ -10,20 +9,12 @@ type State = {
   setItems: (items: NodesItemProps[]) => void;
   setItem: ({ id, ...props }: Partial<NodesItemProps>) => void;
 };
-// const DEFAULT_ITEM = {
-//   id: "",
-//   url: "",
-//   fetchUrl: "",
-//   loading: true,
-//   status: 204,
-//   data: null,
-// };
-const createStore: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useNodesStore = createImmerStore<State>((set) => ({
   items: [],
   pollData: null,
   setItem: ({ id, ...props }) => {
     set((state) => {
-      const item = state.items.find((item) => item.id === id);
+      const item = state.items.find((n) => n.id === id);
       if (item) {
         Object.assign(item, props);
       }
@@ -38,5 +29,4 @@ const createStore: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
       state.pollData = data;
     });
   },
-});
-export const useNodesStore = create<State>()(immer(createStore));
+}));

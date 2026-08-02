@@ -1,5 +1,3 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
 // 1. 导入所有需要同步更新的子 Store
 import { useConfigStore } from "@/Components/Config/store.ts";
 import { useDatabaseStore } from "@/Components/Database/components/store.ts";
@@ -13,13 +11,14 @@ import { useServerInfoStore } from "@/Components/ServerInfo/components/store.ts"
 import { useServerStatusStore } from "@/Components/ServerStatus/components/store.ts";
 import { useTemperatureSensorStore } from "@/Components/TemperatureSensor/components/store.ts";
 import { useUserConfigStore } from "@/Components/UserConfig/store.ts";
+import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
 import type { PollData } from "./types.ts";
 
 type State = {
   pollData: PollData | null;
   setPollData: (pollData: PollData | null) => void;
 };
-const actions: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const usePollStore = createImmerStore<State>((set) => ({
   pollData: null,
   setPollData: (pollData) => {
     set((state) => {
@@ -42,5 +41,4 @@ const actions: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
       .getState()
       .setPollData(pollData?.temperatureSensor ?? null);
   },
-});
-export const usePollStore = create<State>()(immer(actions));
+}));

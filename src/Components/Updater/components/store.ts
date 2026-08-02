@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createStore } from "@/Components/Utils/components/store/index.ts";
 
 type State = {
   isUpdating: boolean;
@@ -9,24 +8,17 @@ type State = {
   setIsUpdating: (isUpdating: boolean) => void;
   setHasUpdateError: (hasUpdateError: boolean) => void;
 };
-const createStore: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useUpdaterStore = createStore<State>((set) => ({
   hasUpdateError: false,
   isUpdating: false,
   setHasUpdateError: (hasUpdateError: boolean) => {
-    set((state) => {
-      state.hasUpdateError = hasUpdateError;
-    });
+    set({ hasUpdateError });
   },
   setIsUpdating: (isUpdating: boolean) => {
-    set((state) => {
-      state.isUpdating = isUpdating;
-    });
+    set({ isUpdating });
   },
   setTargetVersion: (targetVersion: string) => {
-    set((state) => {
-      state.targetVersion = targetVersion;
-    });
+    set({ targetVersion });
   },
   targetVersion: "",
-});
-export const useUpdaterStore = create<State>()(immer(createStore));
+}));

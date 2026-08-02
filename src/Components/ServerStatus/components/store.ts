@@ -1,5 +1,4 @@
-import { create, type StateCreator } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { createStore } from "@/Components/Utils/components/store/index.ts";
 import type { ServerStatusPollDataProps } from "./types.ts";
 
 type State = {
@@ -15,11 +14,7 @@ const initPollData: ServerStatusPollDataProps = {
   swapUsage: { max: 0, value: 0 },
   sysLoad: [0, 0, 0],
 };
-const store: StateCreator<State, [["zustand/immer", never]]> = (set) => ({
+export const useServerStatusStore = createStore<State>((set) => ({
   pollData: initPollData,
-  setPollData: (pollData) =>
-    set((state) => {
-      state.pollData = pollData;
-    }),
-});
-export const useServerStatusStore = create<State>()(immer(store));
+  setPollData: (pollData) => set({ pollData }),
+}));

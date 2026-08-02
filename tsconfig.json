@@ -41,6 +41,9 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ESNext",
+    "types": [
+      "node"
+    ],
     "incremental": false,
     "plugins": [
       {
