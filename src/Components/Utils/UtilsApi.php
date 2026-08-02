@@ -4,6 +4,13 @@ namespace InnStudio\Prober\Components\Utils;
 
 final class UtilsApi
 {
+    public static function compat_curl_close($handle)
+    {
+        if (PHP_VERSION_ID < 80000 && is_resource($handle)) {
+            curl_close($handle);
+        }
+    }
+
     public static function arrayFind(array $array, $callback)
     {
         foreach ($array as $value) {

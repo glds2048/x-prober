@@ -62,7 +62,7 @@ final class UtilsServerIp
                 \CURLOPT_RETURNTRANSFER => true,
             ]);
             $content = curl_exec($ch);
-            curl_close($ch);
+            UtilsApi::compat_curl_close($ch);
         } else {
             $content = file_get_contents($url);
         }

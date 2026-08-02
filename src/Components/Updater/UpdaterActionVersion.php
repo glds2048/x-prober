@@ -5,6 +5,7 @@ namespace InnStudio\Prober\Components\Updater;
 use InnStudio\Prober\Components\Config\ConfigApi;
 use InnStudio\Prober\Components\Rest\RestResponse;
 use InnStudio\Prober\Components\Rest\StatusCode;
+use InnStudio\Prober\Components\Utils\UtilsApi;
 
 final class UpdaterActionVersion
 {
@@ -20,7 +21,7 @@ final class UpdaterActionVersion
             curl_setopt($curl, \CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($curl, \CURLOPT_TIMEOUT, 3);
             $data = curl_exec($curl);
-            curl_close($curl);
+            UtilsApi::compat_curl_close($curl);
             if ( !$data) {
                 continue;
             }

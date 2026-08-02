@@ -6,6 +6,7 @@ use InnStudio\Prober\Components\Bootstrap\Bootstrap;
 use InnStudio\Prober\Components\Config\ConfigApi;
 use InnStudio\Prober\Components\Rest\RestResponse;
 use InnStudio\Prober\Components\Rest\StatusCode;
+use InnStudio\Prober\Components\Utils\UtilsApi;
 
 final class BrowserBenchmarkBrowsersAction
 {
@@ -24,7 +25,7 @@ final class BrowserBenchmarkBrowsersAction
             $curl = curl_init($url);
             curl_setopt($curl, \CURLOPT_RETURNTRANSFER, true);
             $data = (string) curl_exec($curl);
-            curl_close($curl);
+            UtilsApi::compat_curl_close($curl);
             if ( !$data) {
                 continue;
             }

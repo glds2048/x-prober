@@ -10,6 +10,7 @@ $finder = (new PhpCsFixer\Finder())
     ->exclude(__DIR__ . '/node_modules');
 
 return (new PhpCsFixer\Config())
+    ->setUnsupportedPhpVersionAllowed(true)
     ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
     ->setIndent('    ')
     ->setRiskyAllowed(true)

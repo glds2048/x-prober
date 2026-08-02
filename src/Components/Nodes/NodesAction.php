@@ -56,7 +56,7 @@ final class NodesAction
                 \CURLOPT_RETURNTRANSFER => true,
             ]);
             $content = curl_exec($ch);
-            curl_close($ch);
+            UtilsApi::compat_curl_close($ch);
 
             return json_decode($content) ?: null;
         }

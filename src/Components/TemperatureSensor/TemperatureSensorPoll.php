@@ -4,6 +4,7 @@ namespace InnStudio\Prober\Components\TemperatureSensor;
 
 use Exception;
 use InnStudio\Prober\Components\UserConfig\UserConfigApi;
+use InnStudio\Prober\Components\Utils\UtilsApi;
 
 final class TemperatureSensorPoll
 {
@@ -42,7 +43,7 @@ final class TemperatureSensorPoll
             \CURLOPT_TIMEOUT => 2,
         ]);
         $res = curl_exec($ch);
-        curl_close($ch);
+        UtilsApi::compat_curl_close($ch);
 
         return (string) $res;
     }
