@@ -1,5 +1,5 @@
-import { createStore } from "@/Components/Utils/components/store/index.ts";
-import type { TemperatureSensorPollDataProps } from "./types.ts";
+import { createStore } from "@/Components/Utils/components/store/index.js";
+import type { TemperatureSensorPollDataProps } from "./types.js";
 
 type State = {
   pollData: TemperatureSensorPollDataProps | null;

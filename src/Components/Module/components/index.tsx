@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import styles from "./index.module.scss";
-import { useAvailableModules } from "./use-available-modules.ts";
+import { useAvailableModules } from "./use-available-modules.js";
 
 export const Modules: FC = () => {
   const availableModules = useAvailableModules();
@@ -10,7 +10,9 @@ export const Modules: FC = () => {
   }
   return (
     <div className={styles.container}>
-      {availableModules.map(({ id, content: C }) => <C key={id} />)}
+      {availableModules.map(({ id, content: C }) => (
+        <C key={id} />
+      ))}
     </div>
   );
 };

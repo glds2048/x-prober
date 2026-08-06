@@ -1,7 +1,7 @@
-import type { ModuleProps } from "@/Components/Module/components/types.ts";
-import { PING_ID as id } from "./constants.ts";
-import { Ping as content } from "./index.tsx";
-import { PingNav as nav } from "./nav.tsx";
+import type { ModuleProps } from "@/Components/Module/components/types.js";
+import { PING_ID as id } from "./constants.js";
+import { Ping as content } from "./index.js";
+import { PingNav as nav } from "./nav.js";
 
 export const PingLoader: ModuleProps = {
   content,

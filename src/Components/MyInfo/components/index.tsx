@@ -1,13 +1,13 @@
 import type { FC, ReactNode } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { Location } from "@/Components/Location/components/index.tsx";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { useIp } from "@/Components/Utils/components/use-ip.ts";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.tsx";
-import { MY_INFO_ID } from "./constants.ts";
-import { useMyInfoStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { Location } from "@/Components/Location/components/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { useIp } from "@/Components/Utils/components/use-ip.js";
+import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
+import { MY_INFO_ID } from "./constants.js";
+import { useMyInfoStore } from "./store.js";
 
 export const MyInfo: FC = () => {
   const { hasPollData, pollDataIpv4, pollDataIpv6, phpLanguage } =
@@ -17,7 +17,7 @@ export const MyInfo: FC = () => {
         phpLanguage: s.pollData?.phpLanguage ?? "-",
         pollDataIpv4: s.pollData?.ipv4 ?? "",
         pollDataIpv6: s.pollData?.ipv6 ?? "",
-      })),
+      }))
     );
   const { ip: ipv4, msg: ipv4Msg, isLoading: ipv4IsLoading } = useIp(4);
   const { ip: ipv6, msg: ipv6Msg, isLoading: ipv6IsLoading } = useIp(6);

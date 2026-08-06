@@ -1,4 +1,4 @@
-import type { OklchObject } from "./types.ts";
+import type { OklchObject } from "./types.js";
 
 export function toNormalizedOklch(oklch: OklchObject): OklchObject {
   const { l, c, h, a } = oklch;

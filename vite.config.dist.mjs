@@ -33,7 +33,8 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "src/"),
     },
-    extensions: [".ts", ".tsx", ".js", ".mjs"],
+    tsconfigPaths: true,
+    // extensions: [".ts", ".tsx", ".js", ".mjs"],
   },
   root: __dirname,
 });

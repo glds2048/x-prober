@@ -2,8 +2,8 @@ import {
   DEFAULT_MODULE_PRIORITES,
   getStorageModulePriorities,
   setStorageModulePriorities,
-} from "@/Components/Module/components/priority.ts";
-import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
+} from "@/Components/Module/components/priority.js";
+import { createImmerStore } from "@/Components/Utils/components/store/index.js";
 
 type State = {
   priorities: string[];

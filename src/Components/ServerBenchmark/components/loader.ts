@@ -1,7 +1,7 @@
-import type { ModuleProps } from "@/Components/Module/components/types.ts";
-import { SERVER_BENCHMARK_ID as id } from "./constants.ts";
-import { ServerBenchmark as content } from "./index.tsx";
-import { ServerBenchmarkNav as nav } from "./nav.tsx";
+import type { ModuleProps } from "@/Components/Module/components/types.js";
+import { SERVER_BENCHMARK_ID as id } from "./constants.js";
+import { ServerBenchmark as content } from "./index.js";
+import { ServerBenchmarkNav as nav } from "./nav.js";
 
 export const ServerBenchmarkLoader: ModuleProps = {
   content,

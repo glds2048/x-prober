@@ -1,11 +1,11 @@
 import { type FC, memo } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { UiMultiColContainer } from "@/Components/ui/col/multi-container.tsx";
-import { EnableStatus } from "@/Components/ui/enable-status/index.tsx";
-import { DATABASE_ID } from "./constants.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { UiMultiColContainer } from "@/Components/ui/col/multi-container.js";
+import { EnableStatus } from "@/Components/ui/enable-status/index.js";
+import { DATABASE_ID } from "./constants.js";
 import { useDatabaseStore } from "./store";
 
 export const Database: FC = memo(() => {

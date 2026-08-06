@@ -1,6 +1,6 @@
-import { isDeepEqual } from "@/Components/Utils/components/is-deep-equal/index.ts";
-import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
-import type { NodesItemProps, NodesPollDataProps } from "./types.ts";
+import { isDeepEqual } from "@/Components/Utils/components/is-deep-equal/index.js";
+import { createImmerStore } from "@/Components/Utils/components/store/index.js";
+import type { NodesItemProps, NodesPollDataProps } from "./types.js";
 
 type State = {
   items: NodesItemProps[];

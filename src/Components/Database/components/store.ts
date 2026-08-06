@@ -1,5 +1,5 @@
-import { createStore } from "@/Components/Utils/components/store/index.ts";
-import type { DatabasePollDataProps } from "./types.ts";
+import { createStore } from "@/Components/Utils/components/store/index.js";
+import type { DatabasePollDataProps } from "./types.js";
 
 type State = {
   pollData: DatabasePollDataProps | null;

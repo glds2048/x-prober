@@ -1,15 +1,15 @@
-import type { ConfigProps } from "@/Components/Config/types.ts";
-import type { DatabasePollDataProps } from "@/Components/Database/components/types.ts";
-import type { DiskUsagePollDataProps } from "@/Components/DiskUsage/components/types.ts";
-import type { MyInfoPollDataProps } from "@/Components/MyInfo/components/types.ts";
-import type { NetworkStatsPollDataProps } from "@/Components/NetworkStats/components/types.ts";
-import type { NodesPollDataProps } from "@/Components/Nodes/components/types.ts";
-import type { PhpExtensionsPollDataProps } from "@/Components/PhpExtensions/components/types.ts";
-import type { PhpInfoPollDataProps } from "@/Components/PhpInfo/components/types.ts";
-import type { ServerInfoPollDataProps } from "@/Components/ServerInfo/components/types.ts";
-import type { ServerStatusPollDataProps } from "@/Components/ServerStatus/components/types.ts";
-import type { TemperatureSensorPollDataProps } from "@/Components/TemperatureSensor/components/types.ts";
-import type { UserConfigProps } from "@/Components/UserConfig/types.ts";
+import type { ConfigProps } from "@/Components/Config/types.js";
+import type { DatabasePollDataProps } from "@/Components/Database/components/types.js";
+import type { DiskUsagePollDataProps } from "@/Components/DiskUsage/components/types.js";
+import type { MyInfoPollDataProps } from "@/Components/MyInfo/components/types.js";
+import type { NetworkStatsPollDataProps } from "@/Components/NetworkStats/components/types.js";
+import type { NodesPollDataProps } from "@/Components/Nodes/components/types.js";
+import type { PhpExtensionsPollDataProps } from "@/Components/PhpExtensions/components/types.js";
+import type { PhpInfoPollDataProps } from "@/Components/PhpInfo/components/types.js";
+import type { ServerInfoPollDataProps } from "@/Components/ServerInfo/components/types.js";
+import type { ServerStatusPollDataProps } from "@/Components/ServerStatus/components/types.js";
+import type { TemperatureSensorPollDataProps } from "@/Components/TemperatureSensor/components/types.js";
+import type { UserConfigProps } from "@/Components/UserConfig/types.js";
 
 export type PollData = {
   config: ConfigProps | null;

@@ -1,5 +1,5 @@
-import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
-import type { ServerToBrowserPingItemProps } from "./types.ts";
+import { createImmerStore } from "@/Components/Utils/components/store/index.js";
+import type { ServerToBrowserPingItemProps } from "./types.js";
 
 type State = {
   isPingServerToBrowser: boolean;

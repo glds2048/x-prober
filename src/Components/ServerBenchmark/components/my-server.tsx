@@ -1,15 +1,15 @@
 import { type MouseEvent, useMemo, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { Button } from "@/Components/Button/components/index.tsx";
-import { ButtonStatus } from "@/Components/Button/components/types.ts";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { OK, TOO_MANY_REQUESTS } from "@/Components/Rest/http-status.ts";
-import { useToastStore } from "@/Components/Toast/components/store.ts";
-import { template } from "@/Components/Utils/components/template.ts";
-import { ServerBenchmarkItem } from "./server-item.tsx";
-import { useServerBenchmarkStore } from "./store.ts";
-import type { ServerBenchmarkMarksProps } from "./types.ts";
+import { Button } from "@/Components/Button/components/index.js";
+import { ButtonStatus } from "@/Components/Button/components/types.js";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { OK, TOO_MANY_REQUESTS } from "@/Components/Rest/http-status.js";
+import { useToastStore } from "@/Components/Toast/components/store.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { ServerBenchmarkItem } from "./server-item.js";
+import { useServerBenchmarkStore } from "./store.js";
+import type { ServerBenchmarkMarksProps } from "./types.js";
 
 export const ServerBenchmarkMyServer = () => {
   const [benchmarking, setBenchmarking] = useState(false);
@@ -19,7 +19,7 @@ export const ServerBenchmarkMyServer = () => {
     useShallow((s) => ({
       maxMarks: s.maxMarks,
       setMaxMarks: s.setMaxMarks,
-    })),
+    }))
   );
 
   const [marks, setMarks] = useState<ServerBenchmarkMarksProps>({
@@ -30,7 +30,7 @@ export const ServerBenchmarkMyServer = () => {
 
   // 1. 优化异步逻辑，移除 benchmarking 依赖，防止函数频繁重建
   const handleBenchmarking = async (
-    e: MouseEvent<HTMLButtonElement>,
+    e: MouseEvent<HTMLButtonElement>
   ): Promise<void> => {
     e.preventDefault();
     e.stopPropagation();
@@ -59,7 +59,7 @@ export const ServerBenchmarkMyServer = () => {
         open(
           template(gettext("Please wait {{seconds}}s"), {
             seconds: data.seconds,
-          }),
+          })
         );
         return;
       }

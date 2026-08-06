@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { NavItem } from "@/Components/Nav/components/item.tsx";
-import { NODES_ID } from "./constants.ts";
-import { useNodesStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { NavItem } from "@/Components/Nav/components/item.js";
+import { NODES_ID } from "./constants.js";
+import { useNodesStore } from "./store.js";
 
 export const NodesNav: FC = () => {
   const hasNodes = useNodesStore((s) => Boolean(s.pollData?.nodesIds.length));

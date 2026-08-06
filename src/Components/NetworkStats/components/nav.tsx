@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { NavItem } from "@/Components/Nav/components/item.tsx";
-import { NETWORK_STATS_ID } from "./constants.ts";
-import { useNetworkStatsStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { NavItem } from "@/Components/Nav/components/item.js";
+import { NETWORK_STATS_ID } from "./constants.js";
+import { useNetworkStatsStore } from "./store.js";
 
 export const NetworkStatsNav: FC = () => {
   const hasNetworks = useNetworkStatsStore((s) =>

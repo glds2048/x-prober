@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { OK } from "@/Components/Rest/http-status.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { OK } from "@/Components/Rest/http-status.js";
 
 type UseIpProps = {
   ip: string;

@@ -1,21 +1,21 @@
 import { type FC, type RefObject, useCallback, useEffect, useRef } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { Button } from "@/Components/Button/components/index.tsx";
-import { ButtonStatus } from "@/Components/Button/components/types.ts";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { OK } from "@/Components/Rest/http-status.ts";
-import { calculateMdev } from "@/Components/Utils/components/mdev.ts";
-import { template } from "@/Components/Utils/components/template.ts";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.tsx";
-import { usePingStore } from "./store.ts";
+import { Button } from "@/Components/Button/components/index.js";
+import { ButtonStatus } from "@/Components/Button/components/types.js";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import { calculateMdev } from "@/Components/Utils/components/mdev.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
+import { usePingStore } from "./store.js";
 import styles from "./style.module.scss";
-import type { ServerToBrowserPingItemProps } from "./types.ts";
+import type { ServerToBrowserPingItemProps } from "./types.js";
 
 const Results: FC = () => {
   const serverToBrowserPingItems = usePingStore(
-    useShallow((s) => s.serverToBrowserPingItems),
+    useShallow((s) => s.serverToBrowserPingItems)
   );
   const count = serverToBrowserPingItems.length;
 
@@ -24,8 +24,8 @@ const Results: FC = () => {
   let max = count ? serverToBrowserPingItems[0].time : 0;
   let sum = 0;
 
-  for (let i = 0; i < count; i++) {
-    const t = serverToBrowserPingItems[i].time;
+  for (const item of serverToBrowserPingItems) {
+    const t = item.time;
     sum += t;
     if (t < min) {
       min = t;
@@ -43,9 +43,9 @@ const Results: FC = () => {
     <div className={styles.result}>
       {template(
         gettext(
-          "{{times}} times, min/avg/max/mdev = {{min}}/{{avg}}/{{max}}/{{mdev}} ms",
+          "{{times}} times, min/avg/max/mdev = {{min}}/{{avg}}/{{max}}/{{mdev}} ms"
         ),
-        { avg, max, mdev, min, times: count },
+        { avg, max, mdev, min, times: count }
       )}
     </div>
   );
@@ -55,16 +55,14 @@ const ResultContainer: FC<{
   refContainer: RefObject<HTMLUListElement | null>;
 }> = ({ refContainer }) => {
   const serverToBrowserPingItems = usePingStore(
-    useShallow((s) => s.serverToBrowserPingItems),
+    useShallow((s) => s.serverToBrowserPingItems)
   );
   const hasServerToBrowserPingItems = Boolean(serverToBrowserPingItems.length);
-
-  // 优化点：每次列表长度改变时，自动将容器滚动到最下方
   useEffect(() => {
     if (refContainer.current) {
       refContainer.current.scrollTop = refContainer.current.scrollHeight;
     }
-  }, [serverToBrowserPingItems.length, refContainer]);
+  }, [serverToBrowserPingItems.length]);
 
   return (
     <ModuleGroup label={gettext("Results")}>
@@ -95,7 +93,7 @@ export const PingServerToBrowser: FC = () => {
       isPing: s.isPingServerToBrowser || s.isPingServerToServer,
       isPingServerToBrowser: s.isPingServerToBrowser,
       setIsPingServerToBrowser: s.setIsPingServerToBrowser,
-    })),
+    }))
   );
 
   const refItemContainer = useRef<HTMLUListElement | null>(null);
@@ -108,9 +106,8 @@ export const PingServerToBrowser: FC = () => {
   const ping = useCallback(async (): Promise<void> => {
     const start = Date.now();
     try {
-      const { data, status } = await serverFetch<ServerToBrowserPingItemProps>(
-        "ping",
-      );
+      const { data, status } =
+        await serverFetch<ServerToBrowserPingItemProps>("ping");
       if (data?.time && status === OK) {
         const { id, time } = data;
         const end = Date.now();
@@ -119,7 +116,7 @@ export const PingServerToBrowser: FC = () => {
         // 防御本地与服务端时钟不同步导致的负数问题
         const calculatedTime = Math.max(
           0,
-          Math.floor(end - start - serverTime),
+          Math.floor(end - start - serverTime)
         );
 
         addServerToBrowserPingItem({

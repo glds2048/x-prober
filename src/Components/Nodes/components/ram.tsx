@@ -1,9 +1,9 @@
 import { MemoryStick } from "lucide-react";
 import { type FC, memo } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import type { ServerStatusUsageProps } from "@/Components/ServerStatus/components/types.ts";
-import { formatBytes } from "@/Components/Utils/components/format-bytes.ts";
-import { NodesUsage, NodesUsageLabel, NodesUsageOverview } from "./usage.tsx";
+import { gettext } from "@/Components/Language/index.js";
+import type { ServerStatusUsageProps } from "@/Components/ServerStatus/components/types.js";
+import { formatBytes } from "@/Components/Utils/components/format-bytes.js";
+import { NodesUsage, NodesUsageLabel, NodesUsageOverview } from "./usage.js";
 
 export const NodesRam: FC<{ data: ServerStatusUsageProps }> = memo(
   ({ data }) => {
@@ -20,5 +20,5 @@ export const NodesRam: FC<{ data: ServerStatusUsageProps }> = memo(
         </NodesUsageOverview>
       </NodesUsage>
     );
-  },
+  }
 );

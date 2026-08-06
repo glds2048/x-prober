@@ -1,5 +1,5 @@
 import { type FC, memo, type ReactNode } from "react";
-import { ModuleArrow } from "@/Components/Module/components/arrow.tsx";
+import { ModuleArrow } from "@/Components/Module/components/arrow.js";
 import styles from "./item.module.scss";
 
 const ModuleItemTitle: FC<{

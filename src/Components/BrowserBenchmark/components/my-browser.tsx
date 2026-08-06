@@ -1,12 +1,12 @@
 import { type MouseEvent, useCallback, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { Button } from "@/Components/Button/components/index.tsx";
-import { ButtonStatus } from "@/Components/Button/components/types.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { BrowserBenchmarkItem } from "./browsers-item.tsx";
-import { useBrowserBenchmarkStore } from "./store.ts";
-import { BrowserBenchmarkTests } from "./tests.ts";
-import type { BrowserBenchmarkMarksProps } from "./types.ts";
+import { Button } from "@/Components/Button/components/index.js";
+import { ButtonStatus } from "@/Components/Button/components/types.js";
+import { gettext } from "@/Components/Language/index.js";
+import { BrowserBenchmarkItem } from "./browsers-item.js";
+import { useBrowserBenchmarkStore } from "./store.js";
+import { BrowserBenchmarkTests } from "./tests.js";
+import type { BrowserBenchmarkMarksProps } from "./types.js";
 
 export const BrowserBenchmarkMyBrowser = () => {
   const [isBenchmarking, setIsBenchmarking] = useState(false);
@@ -14,7 +14,7 @@ export const BrowserBenchmarkMyBrowser = () => {
     useShallow((s) => ({
       maxMarks: s.maxMarks,
       setMaxMarks: s.setMaxMarks,
-    })),
+    }))
   );
   const [marks, setMarks] = useState<BrowserBenchmarkMarksProps>({
     canvas: 0,
@@ -31,8 +31,8 @@ export const BrowserBenchmarkMyBrowser = () => {
       if (
         !window.confirm(
           gettext(
-            "Running the benchmark may freeze the browser interface for a few seconds. Do you want to continue?",
-          ),
+            "Running the benchmark may freeze the browser interface for a few seconds. Do you want to continue?"
+          )
         )
       ) {
         return;
@@ -51,7 +51,7 @@ export const BrowserBenchmarkMyBrowser = () => {
         setMaxMarks(total);
       }
     },
-    [isBenchmarking, maxMarks, setMaxMarks],
+    [isBenchmarking, maxMarks, setMaxMarks]
   );
   const date = new Date();
   const header = (

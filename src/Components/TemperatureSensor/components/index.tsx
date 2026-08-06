@@ -1,13 +1,13 @@
 import type { FC } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { Meter } from "@/Components/Meter/components/index.tsx";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { template } from "@/Components/Utils/components/template.ts";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.tsx";
-import { TEMPERATURE_SENSOR_ID } from "./constants.ts";
-import { useTemperatureSensorStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { Meter } from "@/Components/Meter/components/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
+import { TEMPERATURE_SENSOR_ID } from "./constants.js";
+import { useTemperatureSensorStore } from "./store.js";
 
 export const TemperatureSensor: FC = () => {
   const items = useTemperatureSensorStore(useShallow((s) => s.pollData ?? []));

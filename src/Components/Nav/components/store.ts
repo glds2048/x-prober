@@ -1,4 +1,4 @@
-import { createStore } from "@/Components/Utils/components/store/index.ts";
+import { createStore } from "@/Components/Utils/components/store/index.js";
 
 type State = {
   activeIndex: number;

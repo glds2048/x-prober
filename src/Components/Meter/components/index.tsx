@@ -1,12 +1,12 @@
 import {
   type FC,
-  memo,
   type MouseEvent,
+  memo,
   type ReactNode,
   useCallback,
 } from "react";
-import { useToastStore } from "@/Components/Toast/components/store.ts";
-import { formatBytes } from "@/Components/Utils/components/format-bytes.ts";
+import { useToastStore } from "@/Components/Toast/components/store.js";
+import { formatBytes } from "@/Components/Utils/components/format-bytes.js";
 import styles from "./index.module.scss";
 
 export const MeterCore: FC<{
@@ -60,7 +60,7 @@ const MemoMeter: FC<{
       }
       navigator.clipboard.writeText(name);
     },
-    [name, title, open],
+    [name, title, open]
   );
   const percentFallback = max === 0 || value === 0 ? 0 : (value / max) * 100;
   const overview = isCapacity

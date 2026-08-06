@@ -1,4 +1,4 @@
-import { gettext } from "@/Components/Language/index.ts";
+import { gettext } from "@/Components/Language/index.js";
 
 export const themes = [
   {

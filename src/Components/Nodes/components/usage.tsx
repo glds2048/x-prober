@@ -1,5 +1,5 @@
 import type { FC, HTMLProps, ReactNode } from "react";
-import { MeterCore } from "@/Components/Meter/components/index.tsx";
+import { MeterCore } from "@/Components/Meter/components/index.js";
 import styles from "./usage.module.scss";
 
 export const NodesUsage: FC<{ children: ReactNode; percent: number }> = ({

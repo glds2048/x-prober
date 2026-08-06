@@ -1,16 +1,16 @@
 import { type FC, type MouseEvent, useCallback } from "react";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { HeaderButton } from "@/Components/Header/components/link.tsx";
-import { gettext } from "@/Components/Language/index.ts";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { HeaderButton } from "@/Components/Header/components/link.js";
+import { gettext } from "@/Components/Language/index.js";
 import {
   CREATED,
   FORBIDDEN,
   INSUFFICIENT_STORAGE,
   INTERNAL_SERVER_ERROR,
-} from "@/Components/Rest/http-status.ts";
-import { useToastStore } from "@/Components/Toast/components/store.ts";
-import { useUpdaterStore } from "./store.ts";
-import { useUpdateNotiText } from "./use-update-noti-text.ts";
+} from "@/Components/Rest/http-status.js";
+import { useToastStore } from "@/Components/Toast/components/store.js";
+import { useUpdaterStore } from "./store.js";
+import { useUpdateNotiText } from "./use-update-noti-text.js";
 export const UpdaterLink: FC = () => {
   const notiText = useUpdateNotiText();
   const isUpdating = useUpdaterStore((s) => s.isUpdating);

@@ -1,16 +1,18 @@
 import { Cpu } from "lucide-react";
 import { type FC, memo } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { SysLoadItem } from "@/Components/ServerStatus/components/system-load.tsx";
-import type { ServerStatusPollDataProps } from "@/Components/ServerStatus/components/types.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { SysLoadItem } from "@/Components/ServerStatus/components/system-load.js";
+import type { ServerStatusPollDataProps } from "@/Components/ServerStatus/components/types.js";
 import styles from "./cpu.module.scss";
-import { NodesUsage, NodesUsageLabel, NodesUsageOverview } from "./usage.tsx";
+import { NodesUsage, NodesUsageLabel, NodesUsageOverview } from "./usage.js";
 
 const SysLoad: FC<{
   items: number[];
 }> = ({ items }) => (
   <div className={styles.sysLoad}>
-    {items.map((n) => <SysLoadItem key={Math.random()} load={n} />)}
+    {items.map((n) => (
+      <SysLoadItem key={Math.random()} load={n} />
+    ))}
   </div>
 );
 export const NodesCpu: FC<{

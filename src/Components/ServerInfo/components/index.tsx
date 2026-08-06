@@ -1,17 +1,17 @@
 import { type FC, memo, type ReactNode, useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { Location } from "@/Components/Location/components/index.tsx";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { OK } from "@/Components/Rest/http-status.ts";
-import { template } from "@/Components/Utils/components/template.ts";
-import { UiMultiColContainer } from "@/Components/ui/col/multi-container.tsx";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.tsx";
-import { SERVER_INFO_ID } from "./constants.ts";
-import { useServerInfoStore } from "./store.ts";
-import type { ServerInfoPollDataProps } from "./types.ts";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { Location } from "@/Components/Location/components/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { UiMultiColContainer } from "@/Components/ui/col/multi-container.js";
+import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
+import { SERVER_INFO_ID } from "./constants.js";
+import { useServerInfoStore } from "./store.js";
+import type { ServerInfoPollDataProps } from "./types.js";
 
 const DEFAULT_UPTIME = { days: 0, hours: 0, mins: 0, secs: 0 };
 const ServerTime: FC<{
@@ -21,7 +21,7 @@ const ServerTime: FC<{
   const { days, hours, mins, secs } = serverUptime;
   const uptime = template(
     gettext("{{days}}d {{hours}}h {{mins}}min {{secs}}s"),
-    { days, hours, mins, secs },
+    { days, hours, mins, secs }
   );
   const items = [
     [gettext("Time"), serverTime],
@@ -95,14 +95,14 @@ const MultiItems: FC<{
         ))}
       </>
     );
-  },
+  }
 );
 export const LiveUptime: FC = () => {
   const { serverTime, serverUptime } = useServerInfoStore(
     useShallow((s) => ({
       serverTime: s.pollData?.serverTime ?? "-",
       serverUptime: s.pollData?.serverUptime ?? DEFAULT_UPTIME,
-    })),
+    }))
   );
   return <ServerTime serverTime={serverTime} serverUptime={serverUptime} />;
 };
@@ -132,13 +132,13 @@ export const ServerInfo: FC = () => {
       serverName: s.pollData?.serverName ?? "-",
       serverOs: s.pollData?.serverOs ?? "-",
       serverSoftware: s.pollData?.serverSoftware ?? "-",
-    })),
+    }))
   );
   // fetch ipv4
   useEffect(() => {
     const fetchData = async () => {
       const { data, status } = await serverFetch<{ ip: string }>(
-        "serverPublicIpv4",
+        "serverPublicIpv4"
       );
       if (data?.ip && status === OK) {
         setPublicIpv4(data.ip);
@@ -150,7 +150,7 @@ export const ServerInfo: FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data, status } = await serverFetch<{ ip: string }>(
-        "serverPublicIpv6",
+        "serverPublicIpv6"
       );
       if (data?.ip && status === OK) {
         setPublicIpv6(data.ip);

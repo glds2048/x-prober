@@ -1,6 +1,6 @@
 import { type FC, memo } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { formatBytes } from "@/Components/Utils/components/format-bytes.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { formatBytes } from "@/Components/Utils/components/format-bytes.js";
 import styles from "./item.module.scss";
 
 type NetworksStatsItemProps = {
@@ -35,7 +35,7 @@ export const NetworksStatsItem: FC<NetworksStatsItemProps> = memo(
         </div>
       </div>
     );
-  },
+  }
 );
 
 NetworksStatsItem.displayName = "NetworksStatsItem";

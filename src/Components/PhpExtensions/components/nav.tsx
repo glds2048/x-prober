@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { NavItem } from "@/Components/Nav/components/item.tsx";
-import { PHP_EXTENSIONS_ID } from "./constants.ts";
-import { usePhpExtensionsStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { NavItem } from "@/Components/Nav/components/item.js";
+import { PHP_EXTENSIONS_ID } from "./constants.js";
+import { usePhpExtensionsStore } from "./store.js";
 
 export const PhpExtensionsNav: FC = () => {
   const hasPollData = usePhpExtensionsStore((s) => Boolean(s.pollData));
