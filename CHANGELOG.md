@@ -5,6 +5,19 @@ will be documented in this file
 
 ---
 
+## 10.0.3-beta.1 - 2026-08-06
+
+### Fix / 修复
+- 修复温度传感器渲染错误问题
+- 修复版本号对比模块无法正确计算 1.00.1 双零的情况
+- Fix temperature sensor rendering error
+- Fixed an issue where the version number comparison module could not correctly calculate the double zeros in version 1.00.1.
+
+### Optimize
+- 优化 import 路径为 .js 后缀
+
+---
+
 ## 10.0.2 - 2026-08-02
 
 ### Fix / 修复
@@ -14,6 +27,8 @@ will be documented in this file
 ### Optimize
 - 优化 store
 - Optimize store
+
+---
 
 ## 10.0.1 - 2026-07-14
 
