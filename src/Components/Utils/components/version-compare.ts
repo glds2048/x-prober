@@ -91,7 +91,7 @@ export function versionCompare(v1: string, v2: string): number {
 
     // Handle alpha/beta/rc tags in lower case / 转换为小写处理预发布标签
     const lowPart = part.toLowerCase();
-    const weight = lowPart in SPECIAL_TAGS ? SPECIAL_TAGS[lowPart] : 0;
+    const weight = lowPart in SPECIAL_TAGS ? SPECIAL_TAGS[lowPart] : -1;
     return { isNum: false, val: lowPart, weight };
   };
 
