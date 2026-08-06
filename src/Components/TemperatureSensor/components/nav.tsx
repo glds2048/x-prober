@@ -6,7 +6,7 @@ import { useTemperatureSensorStore } from "./store.ts";
 
 export const TemperatureSensorNav: FC = () => {
   const hasPollData = useTemperatureSensorStore((s) =>
-    Boolean(s.pollData?.items.length)
+    Boolean(s.pollData?.length)
   );
   if (!hasPollData) {
     return null;

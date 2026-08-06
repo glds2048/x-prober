@@ -3,6 +3,4 @@ export type TemperatureSensorItemProps = {
   name: string;
   celsius: number;
 };
-export type TemperatureSensorPollDataProps = {
-  items: TemperatureSensorItemProps[];
-};
+export type TemperatureSensorPollDataProps = TemperatureSensorItemProps[];
