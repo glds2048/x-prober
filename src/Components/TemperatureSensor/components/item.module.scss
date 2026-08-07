@@ -1,0 +1,22 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "x-temperature-label x-temperature-usage"
+        "x-temperature-meter x-temperature-meter";
+    gap: var(--x-gutter-sm);
+}
+.label {
+    display: grid;
+    grid-area: x-temperature-label;
+    align-items: center;
+}
+.usage {
+    grid-area: x-temperature-usage;
+    text-align: right;
+}
+.meter {
+    display: grid;
+    grid-template-areas: "x-meter-core";
+    grid-area: x-temperature-meter;
+}

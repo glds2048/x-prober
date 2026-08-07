@@ -1,12 +1,10 @@
 import type { FC } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { gettext } from "@/Components/Language/index.js";
-import { Meter } from "@/Components/Meter/components/index.js";
-import { ModuleGroup } from "@/Components/Module/components/group.js";
 import { ModuleItem } from "@/Components/Module/components/item.js";
-import { template } from "@/Components/Utils/components/template.js";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
 import { TEMPERATURE_SENSOR_ID } from "./constants.js";
+import styles from "./index.module.scss";
+import { TempperatureSensorItem } from "./item.js";
 import { useTemperatureSensorStore } from "./store.js";
 
 export const TemperatureSensor: FC = () => {
@@ -19,23 +17,11 @@ export const TemperatureSensor: FC = () => {
       id={TEMPERATURE_SENSOR_ID}
       title={gettext("Temperature sensor")}
     >
-      <UiSingleColContainer>
+      <div className={styles.main}>
         {items.map(({ id, name, celsius }) => (
-          <ModuleGroup
-            key={id}
-            title={template(gettext("{{sensor}} temperature"), {
-              sensor: name,
-            })}
-          >
-            <Meter
-              isCapacity={false}
-              max={150}
-              percentTag="℃"
-              value={celsius}
-            />
-          </ModuleGroup>
+          <TempperatureSensorItem key={id} label={name} value={celsius} />
         ))}
-      </UiSingleColContainer>
+      </div>
     </ModuleItem>
   );
 };
