@@ -5,26 +5,40 @@ will be documented in this file
 
 ---
 
-## 10.0.3-beta.1 - 2026-08-06
+## 10.0.3 - 2026-08-07
 
-### Fix / 修复
+### 修复 / Fix
 - 修复温度传感器渲染错误问题
 - 修复版本号对比模块无法正确计算 1.00.1 双零的情况
 - Fix temperature sensor rendering error
 - Fixed an issue where the version number comparison module could not correctly calculate the double zeros in version 1.00.1.
 
-### Optimize
+### 优化 / Optimize
+- 优化部分UI间距
+- Optimize some UI gap
+
+
+
+## 10.0.3-beta.1 - 2026-08-06
+
+### 修复 / Fix
+- 修复温度传感器渲染错误问题
+- 修复版本号对比模块无法正确计算 1.00.1 双零的情况
+- Fix temperature sensor rendering error
+- Fixed an issue where the version number comparison module could not correctly calculate the double zeros in version 1.00.1.
+
+### 优化 / Optimize
 - 优化 import 路径为 .js 后缀
 
 ---
 
 ## 10.0.2 - 2026-08-02
 
-### Fix / 修复
+### 修复 / Fix
 - 修复在 PHP8.5 下 curl_close() 出现的启用警告
 - Fixed the enable warning that occurred with `curl_close()` in PHP 8.5
 
-### Optimize
+### 优化 / Optimize
 - 优化 store
 - Optimize store
 
@@ -32,12 +46,12 @@ will be documented in this file
 
 ## 10.0.1 - 2026-07-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复因 CSS Module 隔离导致的样式部分失效问题
 - Fixed partial style failure caused by CSS Module isolation
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化 Ping 功能在某些情况下无法停止的问题
 - Improved the Ping feature to ensure it can be stopped reliably in all cases
@@ -46,19 +60,19 @@ will be documented in this file
 
 ## 10.0.0 - 2026-07-13
 
-### Breaking changes / 破坏性变更
+### 破坏性变更 / Breaking changes
 
 - 配置文件由 `xconfig.toml` 替代原有的 `xconfig.json`
 - 重新设计了用户界面及配色方案
 - Use `xconfig.toml` instead of `xconfig.json` for configuration
 - Completely redesigned UI and color palette
 
-### Add / 新增
+### 新增 / Add
 
 - 新增“良夜”（深色）与“曦光”（浅色）两套配色主题
 - Added "LiangYe" (dark) and "XiGuang" (light) color schemes
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5 中 `str_*` 系列函数的兼容性错误
 - 修复 `filter_input` 函数在 PHP 中已弃用的警告
@@ -67,7 +81,7 @@ will be documented in this file
 - Fixed deprecated warnings in `filter_input` function
 - Fixed `COUNTINE` keyword error in PHP5
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 使用 Zustand 替代 MobX 作为状态管理库
 - 更新项目依赖包
@@ -80,12 +94,12 @@ will be documented in this file
 
 ## 9.1.1 - 2025-12-21
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP7/PHP5 中 `mb_*` 函数的兼容性错误
 - Fixed `mb_*` function errors in PHP7/PHP5
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化数据刷新间隔逻辑
 - Optimized interval data fetching logic
@@ -94,7 +108,7 @@ will be documented in this file
 
 ## 9.1.0 - 2025-09-05
 
-### Add / 新增
+### 新增 / Add
 
 - 新增浏览器性能测试（Browser Benchmark）
 - Added Browser Benchmark feature
@@ -103,17 +117,17 @@ will be documented in this file
 
 ## 9.0.8 - 2025-09-01
 
-### Add / 新增
+### 新增 / Add
 
 - 增加浏览器性能测试的占位界面
 - Added placeholder UI for Browser Benchmark
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 Nginx `auth_basic` 认证错误
 - Fixed Nginx `auth_basic` authentication error
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 调整字体样式
 - Adjusted font styles
@@ -122,12 +136,12 @@ will be documented in this file
 
 ## 9.0.7 - 2025-08-16
 
-### Add / 新增
+### 新增 / Add
 
 - 新增「Ping」检测功能
 - Added "Ping" feature
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化多语言文案
 - 优化 Toast 提示样式
@@ -138,7 +152,7 @@ will be documented in this file
 
 ## 9.0.6 - 2025-08-16
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化导航栏文字内容
 - 优化多语言文案
@@ -151,7 +165,7 @@ will be documented in this file
 
 ## 9.0.5 - 2025-08-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复节点信息获取错误
 - Fixed nodes data fetching error
@@ -160,7 +174,7 @@ will be documented in this file
 
 ## 9.0.4 - 2025-08-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5.4 中 `array_find` 函数不存在的问题
 - Fixed `array_find` function not available in PHP5.4
@@ -169,7 +183,7 @@ will be documented in this file
 
 ## 9.0.3 - 2025-08-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复节点 API 请求错误
 - 修复页脚样式异常
@@ -182,7 +196,7 @@ will be documented in this file
 
 ## 9.0.2 - 2025-08-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复版本更新检测错误
 - Fixed version update detection error
@@ -191,7 +205,7 @@ will be documented in this file
 
 ## 9.0.1 - 2025-08-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复页脚未正确显示应用名称的问题
 - Fixed footer not showing application name
@@ -215,7 +229,7 @@ will be documented in this file
 
 ## 8.20.0 - 2025-03-23
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 #224 反馈的问题
 - Fixed issue #224
@@ -224,7 +238,7 @@ will be documented in this file
 
 ## 8.19.0 - 2024-08-18
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 调整 `is_readable` 函数调用时的警告处理
 - Adjusted warning handling for `is_readable` function
@@ -233,12 +247,12 @@ will be documented in this file
 
 ## 8.18.0 - 2024-07-27
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 ARM 架构 CPU 检测
 - Added ARM CPU detection
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化磁盘使用率检测逻辑
 - Optimized disk usage detection
@@ -247,12 +261,12 @@ will be documented in this file
 
 ## 8.17.0 - 2023-12-31
 
-### Add / 新增
+### 新增 / Add
 
 - 增加磁盘使用详情展示
 - Added detailed disk usage information
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化界面样式
 - Optimized UI styles
@@ -261,7 +275,7 @@ will be documented in this file
 
 ## 8.16.0 - 2022-12-14
 
-### Add / 新增
+### 新增 / Add
 
 - 增加服务器性能测试冷却时间配置项
 - Added configurable cooldown for server benchmark
@@ -270,7 +284,7 @@ will be documented in this file
 
 ## 8.15.0 - 2022-12-08
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化界面样式
 - Optimized UI styles
@@ -279,7 +293,7 @@ will be documented in this file
 
 ## 8.14.0 - 2022-11-14
 
-### Add / 新增
+### 新增 / Add
 
 - 新增深色模式
 - Added dark mode
@@ -288,7 +302,7 @@ will be documented in this file
 
 ## 8.13.0 - 2022-11-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复页面背景色异常
 - Fixed body color issue
@@ -318,7 +332,7 @@ will be documented in this file
 - 移除对 PHP5.3 的兼容支持
 - Dropped PHP5.3 compatibility
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 更新项目依赖包
 - Updated dependencies
@@ -327,7 +341,7 @@ will be documented in this file
 
 ## 8.10.0 - 2022-06-19
 
-### Add / 新增
+### 新增 / Add
 
 - 新增 PDO 数据库驱动检测
 - Added PDO database driver detector
@@ -336,7 +350,7 @@ will be documented in this file
 
 ## 8.9.0 - 2022-04-02
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 移除 babel-loader
 - 升级至 React 18
@@ -349,12 +363,12 @@ will be documented in this file
 
 ## 8.8.0 - 2022-01-08
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 `ping` 功能报错
 - Fixed `ping` feature error
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化粗体字体样式
 - Optimized bold font style
@@ -363,7 +377,7 @@ will be documented in this file
 
 ## 8.7.0 - 2021-12-05
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5.4 中 `pow` 函数的兼容性错误
 - Fixed `pow` function error in PHP5.4
@@ -372,7 +386,7 @@ will be documented in this file
 
 ## 8.6.0 - 2021-10-25
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复“我的服务器性能测试”按钮点击错误
 - Fixed "My Server Benchmark" button error
@@ -381,12 +395,12 @@ will be documented in this file
 
 ## 8.5.0 - 2021-10-19
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP8.1 中 `FILTER_SANITIZE_STRING` 已弃用的问题
 - Fixed `FILTER_SANITIZE_STRING` deprecation in PHP8.1
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 内部优化
 - Internal improvements
@@ -395,7 +409,7 @@ will be documented in this file
 
 ## 8.4.0 - 2021-10-18
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化 MobX 6 状态存储层
 - 更新项目依赖包
@@ -406,7 +420,7 @@ will be documented in this file
 
 ## 8.3.0 - 2021-08-16
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 `mb_substr_count` 函数兼容性问题
 - Fixed `mb_substr_count` function issue
@@ -415,7 +429,7 @@ will be documented in this file
 
 ## 8.2.0 - 2021-08-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复进度条颜色显示错误
 - Fixed progress bar color error
@@ -424,7 +438,7 @@ will be documented in this file
 
 ## 8.1.0 - 2021-08-14
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化页面最大宽度
 - ESLint 代码规范修复
@@ -435,7 +449,7 @@ will be documented in this file
 
 ## 8.0.0 - 2021-07-13
 
-### Add / 新增
+### 新增 / Add
 
 - 全新服务器性能测试功能
 - Brand new server benchmarks
@@ -444,7 +458,7 @@ will be documented in this file
 
 ## 7.7.0 - 2021-06-30
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 IPv4/IPv6 信息项重复显示问题
 - Fixed duplicate IPv4/IPv6 items
@@ -453,7 +467,7 @@ will be documented in this file
 
 ## 7.6.0 - 2021-06-28
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化服务器信息视图渲染性能
 - 更新项目依赖包
@@ -466,7 +480,7 @@ will be documented in this file
 
 ## 7.5.0 - 2021-04-10
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复系统负载更新错误
 - Fixed system load update error
@@ -475,12 +489,12 @@ will be documented in this file
 
 ## 7.4.0 - 2021-02-25
 
-### Add / 新增
+### 新增 / Add
 
 - 新增 PHP8 Opcache JIT 检测器
 - Added PHP8 Opcache JIT detector
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 `build-lang.js` 脚本中 lodash 报错
 - 修复日语翻译错误
@@ -491,12 +505,12 @@ will be documented in this file
 
 ## 7.3.0 - 2021-02-24
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5 中 null 合并运算符的兼容问题
 - Fixed null coalescing operator in PHP5
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化导航模块
 - 优化 IP 地址显示文本
@@ -511,7 +525,7 @@ will be documented in this file
 
 ## 7.2.0 - 2021-02-18
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化 IPv4/v6 文字描述
 - 优化导航栏样式
@@ -528,12 +542,12 @@ will be documented in this file
 
 ## 7.1.0 - 2021-02-17
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 Zend "Optimizer" 拼写错误（感谢 Jack Cherng）
 - Fixed typo in Zend "Optimizer" (thanks Jack Cherng)
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化默认配色，使其更精致
 - 优化深色配色，使其更深邃
@@ -544,7 +558,7 @@ will be documented in this file
 
 ## 7.0.0 - 2021-02-13
 
-### Add / 新增
+### 新增 / Add
 
 - 新增深色模式
 - 新增服务器 IPv4/IPv6 信息
@@ -566,12 +580,12 @@ will be documented in this file
 
 ## 6.7.0 - 2021-01-28
 
-### Add / 新增
+### 新增 / Add
 
 - 增加服务器性能测试结果复制功能
 - Added copy feature for server benchmark results
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化颜色样式
 - 优化 HTML 结构
@@ -609,7 +623,7 @@ will be documented in this file
 - Upgraded Webpack to 5.1 and re-configured
 - Updated dependencies
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP 8 中 `mysqli_get_client_version()` 不应带参数的问题（感谢 Jack Cherng
   #104）
@@ -620,7 +634,7 @@ will be documented in this file
 
 ## 6.2.0 - 2020-09-18
 
-### Add / 新增
+### 新增 / Add
 
 - 增加服务器 IP 显示开关
 - Added server IP feature toggle
@@ -634,7 +648,7 @@ will be documented in this file
 
 ## 6.1.0 - 2020-08-20
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复节点网络速率显示错误
 - Fixed nodes network speed display error
@@ -643,7 +657,7 @@ will be documented in this file
 
 ## 6.0.0 - 2020-08-19
 
-### Add / 新增
+### 新增 / Add
 
 - 新增节点（Nodes）功能
 - Added Nodes feature
@@ -652,7 +666,7 @@ will be documented in this file
 
 ## 5.0.0 - 2020-08-11
 
-### Add / 新增
+### 新增 / Add
 
 - 新增多套配色方案
 - Added color schemes
@@ -661,7 +675,7 @@ will be documented in this file
 
 ## 4.10.0 - 2020-08-11
 
-### Add / 新增
+### 新增 / Add
 
 - 新增 `xconfig.json` 配置文件，用于探针设置
 - 添加功能禁用配置项
@@ -674,7 +688,7 @@ will be documented in this file
 
 ## 4.9.0 - 2020-06-06
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化部分设备的网络统计显示
 - Optimized network stats for some devices
@@ -683,7 +697,7 @@ will be documented in this file
 
 ## 4.8.0 - 2020-05-04
 
-### Add / 新增
+### 新增 / Add
 
 - 添加启动动画
 - Added startup animation
@@ -693,7 +707,7 @@ will be documented in this file
 - 许可证由 GPL2.0 升级至 GPL3.0
 - Updated license from GPL2.0 to GPL3.0
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 微小的样式优化
 - Minor style tweaks
@@ -702,7 +716,7 @@ will be documented in this file
 
 ## 4.7.0 - 2020-04-25
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复内存刷新错误
 - Fixed memory refresh error
@@ -716,7 +730,7 @@ will be documented in this file
 - Updated SQLite3 stable version
 - Updated MySQLi client version
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 移除 lodash 库，减小 JS 文件体积
 - Removed lodash to reduce JS bundle size
@@ -725,7 +739,7 @@ will be documented in this file
 
 ## 4.6.0 - 2020-04-22
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 32 位操作系统下大数字显示错误
 - Fixed large number error on 32-bit OS
@@ -734,7 +748,7 @@ will be documented in this file
 
 ## 4.5.0 - 2020-04-10
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化语言显示效果
 - Optimized language display
@@ -752,12 +766,12 @@ will be documented in this file
 
 ## 4.3.0 - 2020-02-22
 
-### Add / 新增
+### 新增 / Add
 
 - 增加内存使用情况说明
 - Added memory usage description
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化界面颜色
 - 优化 Ping 按钮样式
@@ -768,12 +782,12 @@ will be documented in this file
 
 ## 4.2.0 - 2020-02-06
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 减小 JS 文件体积
 - Reduced JS file size
 
-### Add / 新增
+### 新增 / Add
 
 - 新增 `php-dev.sh` 开发辅助脚本
 - 生产环境增加 babel-loader
@@ -789,12 +803,12 @@ will be documented in this file
 
 ## 4.1.0 - 2020-01-30
 
-### Add / 新增
+### 新增 / Add
 
 - 增加磁盘实时使用率展示
 - Added real-time disk usage
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化系统负载描述
 - 移除 babel
@@ -807,12 +821,12 @@ will be documented in this file
 
 ## 4.0.0 - 2020-01-13
 
-### Add / 新增
+### 新增 / Add
 
 - 全新模块可排序功能
 - New module sortability
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化进度条性能
 - 优化文本大小写
@@ -823,12 +837,12 @@ will be documented in this file
 
 ## 3.11.0 - 2020-01-12
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 `extensions` 目录以备未来扩展
 - Added `extensions` directory for future extensions
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化温度传感器显示
 - Optimized temperature sensor display
@@ -837,12 +851,12 @@ will be documented in this file
 
 ## 3.10.0 - 2020-01-10
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复底部导航项切换问题
 - Fixed bottom nav item switch
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 调整颜色搭配
 - Adjusted colors
@@ -851,14 +865,14 @@ will be documented in this file
 
 ## 3.9.0 - 2020-01-09
 
-### Add / 新增
+### 新增 / Add
 
 - 新增温度传感器功能 (#7)
 - 导航栏在移动端可滚动
 - Added temperature sensor feature (#7)
 - Navbar scrollable on mobile view
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复开发环境下语言 JSON 文件路径错误
 - Fixed language JSON file path error (for dev)
@@ -867,7 +881,7 @@ will be documented in this file
 
 ## 3.8.0 - 2020-01-06
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化引导加载代码
 - Optimized bootstrap code
@@ -883,7 +897,7 @@ will be documented in this file
 
 ## 3.7.0 - 2019-12-03
 
-### Add / 新增
+### 新增 / Add
 
 - 增加多个更新检查源
 - Added multiple update check sources
@@ -892,7 +906,7 @@ will be documented in this file
 
 ## 3.6.0 - 2019-11-20
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 mbstring 扩展检测问题
 - Fixed mbstring extension detection
@@ -906,7 +920,7 @@ will be documented in this file
 
 ## 3.5.0 - 2019-11-20
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 HTTP 认证支持
 - Added HTTP authorization
@@ -920,7 +934,7 @@ will be documented in this file
 
 ## 3.4.0 - 2019-10-21
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 重命名 styled-components 组件
 - Renamed styled-components components
@@ -929,7 +943,7 @@ will be documented in this file
 
 ## 3.3.0 - 2019-09-19
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化缺口位置
 - 优化语言生成工具
@@ -945,7 +959,7 @@ will be documented in this file
 
 ## 3.2 - 2019-08-03
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复旧版浏览器中进度条颜色错误
 - Fixed progress bar color error in older browsers
@@ -954,7 +968,7 @@ will be documented in this file
 
 ## 3.1 - 2019-08-01
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化页面滚动体验
 - 优化视图显示尺寸
@@ -965,7 +979,7 @@ will be documented in this file
 
 ## 3.0 - 2019-08-31
 
-### Add / 新增
+### 新增 / Add
 
 - 独立的 PING 功能
 - 纯 JS 渲染信息
@@ -976,7 +990,7 @@ will be documented in this file
 - Support for 2K/4K resolution
 - Added CPU usage for Windows
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化多语言文案
 - 精简服务器性能测试项目
@@ -996,7 +1010,7 @@ will be documented in this file
 
 ## 2.4.4 - 2019-07-11
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 lodash 安全漏洞
 - Fixed lodash security vulnerabilities
@@ -1005,7 +1019,7 @@ will be documented in this file
 
 ## 2.4.3 - 2019-07-06
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 #31 除零错误
 - Fixed #31 division by zero error
@@ -1026,7 +1040,7 @@ will be documented in this file
 - Updated latest PHP version to 7.3.6
 - Updated SpartanHost benchmarks
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 `tar` 包问题
 - Fixed `tar` package
@@ -1035,7 +1049,7 @@ will be documented in this file
 
 ## 2.4.1 - 2019-05-24
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化 `position:fixed` 性能
 - Optimized `position:fixed` performance
@@ -1044,7 +1058,7 @@ will be documented in this file
 
 ## 2.4.0 - 2019-05-14
 
-### Add / 新增
+### 新增 / Add
 
 - 新增 Ping 服务器功能
 - Added Ping Server feature
@@ -1071,7 +1085,7 @@ will be documented in this file
 
 ## 2.3.1 - 2019-03-16
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 将“Fork me”图片改为 HTML 文字
 - 移除 Microsoft YaHei/YaHei UI 字体
@@ -1086,7 +1100,7 @@ will be documented in this file
 
 ## 2.3.0 - 2019-03-15
 
-### Add / 新增
+### 新增 / Add
 
 - 增加多个更新源
 - 增加 NGINX 最新版本提示
@@ -1097,7 +1111,7 @@ will be documented in this file
 
 ## 2.2.2 - 2019-03-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 Windows 下的错误
 - Fixed error on Windows
@@ -1106,7 +1120,7 @@ will be documented in this file
 
 ## 2.2.1 - 2019-03-13
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化 HTML class 命名
 - Optimized HTML class names
@@ -1115,7 +1129,7 @@ will be documented in this file
 
 ## 2.2.0 - 2019-03-09
 
-### Add / 新增
+### 新增 / Add
 
 - 编译增加调试模式
 - 网络测速（服务器性能测试）增加二进制下载
@@ -1130,7 +1144,7 @@ will be documented in this file
 - Added latest PHP version 7.3.3
 - Added 1Gbits server benchmark
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 将 `seconds` 简写为 `s`
 - Changed `seconds` to `s`
@@ -1139,7 +1153,7 @@ will be documented in this file
 
 ## 2.1.8 - 2019-03-05
 
-### Add / 新增
+### 新增 / Add
 
 - 对 fetch 请求禁用缓存
 - Disable cache for fetch requests
@@ -1148,7 +1162,7 @@ will be documented in this file
 
 ## 2.1.7 - 2019-03-02
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化更新后清理 OPCACHE 缓存的操作
 - Optimized OPCACHE cache clearing after update
@@ -1157,7 +1171,7 @@ will be documented in this file
 
 ## 2.1.6 - 2019-03-01
 
-### Add / 新增
+### 新增 / Add
 
 - 增加服务器性能测试日期
 - 增加 APP 配置文件
@@ -1170,7 +1184,7 @@ will be documented in this file
 - Added SQLite3 extension detection
 - Added SimpleXML extension detection
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化服务器性能测试样式
 - 优化 Firefox 下模块标题样式
@@ -1181,14 +1195,14 @@ will be documented in this file
 
 ## 2.1.5 - 2019-02-20
 
-### Add / 新增
+### 新增 / Add
 
 - 增加详细信息性能测试
 - 增加 Monovm 性能测试结果
 - Added detailed benchmark information
 - Added Monovm benchmark results
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复进度条中零值文字描述错误
 - Fixed zero value text description error in progress
@@ -1197,12 +1211,12 @@ will be documented in this file
 
 ## 2.1.4 - 2019-02-19
 
-### Add / 新增
+### 新增 / Add
 
 - 增加内存真实使用率
 - Added real memory usage
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化内存 cache/buffers 使用信息
 - Optimized memory cache/buffers usage information
@@ -1211,7 +1225,7 @@ will be documented in this file
 
 ## 2.1.3 - 2019-02-14
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 Google 搜索关键字
 - Added Google search keyword
@@ -1229,7 +1243,7 @@ will be documented in this file
 
 ## 2.1.1 - 2019-02-09
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 Vultr PHP7.3 性能测试数据
 - 更新资源文件
@@ -1240,7 +1254,7 @@ will be documented in this file
 
 ## 2.1.0 - 2019-01-29
 
-### Add / 新增
+### 新增 / Add
 
 - 增加内存 cached/buffers 信息
 - 增加 Swap cached 信息
@@ -1251,17 +1265,17 @@ will be documented in this file
 
 ## 2.0.9 - 2019-01-28
 
-### Add / 新增
+### 新增 / Add
 
 - 增加资源文件缓存头
 - Added assets file cache header
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 #14（磁盘使用率）
 - Fixed #14 (disk usage)
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化条目列表样式
 - Optimized item list styles
@@ -1270,14 +1284,14 @@ will be documented in this file
 
 ## 2.0.8 - 2019-01-27
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化样式，视觉更舒适
 - 调整 PHP 已加载扩展的位置
 - Optimized styles for better comfort
 - Adjusted PHP loaded extensions position
 
-### Add / 新增
+### 新增 / Add
 
 - 增加日语翻译
 - Added Japanese language
@@ -1286,7 +1300,7 @@ will be documented in this file
 
 ## 2.0.7 - 2019-01-22
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复磁盘进度条显示错误
 - Fixed disk progress error
@@ -1295,12 +1309,12 @@ will be documented in this file
 
 ## 2.0.6 - 2019-01-22
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复总内存显示不正确的问题
 - Fixed incorrect total memory
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化进度条逻辑
 - Optimized progress logic
@@ -1309,7 +1323,7 @@ will be documented in this file
 
 ## 2.0.5 - 2019-01-21
 
-### Add / 新增
+### 新增 / Add
 
 - 增加工具提示样式
 - 增加详细性能测试工具提示
@@ -1322,7 +1336,7 @@ will be documented in this file
 - Added LDAP extension detection
 - Hide SWAP progress when no SWAP
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化缺口位置
 - 优化 fetch 引导逻辑
@@ -1337,7 +1351,7 @@ will be documented in this file
 
 ## 2.0.4 - 2019-01-19
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 移除 `is_readable()` 函数的警告信息
 - 移除 HTML 压缩
@@ -1348,12 +1362,12 @@ will be documented in this file
 
 ## 2.0.3 - 2019-01-14
 
-### Add / 新增
+### 新增 / Add
 
 - 增加调试模式
 - Added debug mode
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5.6- 兼容性问题
 - Fixed compatibility for PHP5.6-
@@ -1367,12 +1381,12 @@ will be documented in this file
 
 ## 2.0.2 - 2019-01-14
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 #10 错误报告警告
 - Fixed #10 error reporting warning
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化缺口样式
 - Optimized notch style
@@ -1381,7 +1395,7 @@ will be documented in this file
 
 ## 2.0.1 - 2019-01-13
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化进度条样式
 - 优化缺口样式
@@ -1394,7 +1408,7 @@ will be documented in this file
 
 ## 2.0.0 - 2019-01-13
 
-### Add / 新增
+### 新增 / Add
 
 - 增加最新 PHP 版本 7.3.1
 - 增加 ionCube 扩展检测
@@ -1413,7 +1427,7 @@ will be documented in this file
 - Added React + MobX for developer environment
 - Updated developer documentation
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 重写所有 HTML 代码
 - 重新设计用户界面
@@ -1429,7 +1443,7 @@ will be documented in this file
 
 ## 1.7.5 - 2018-12-20
 
-### Add / 新增
+### 新增 / Add
 
 - 增加最新 PHP 版本 7.3.0
 - 自更新后自动清理 OPCACHE 缓存
@@ -1440,7 +1454,7 @@ will be documented in this file
 
 ## 1.7.4 - 2018-11-22
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5.3~5.6 下的错误
 - Fixed errors on PHP5.3~5.6
@@ -1449,7 +1463,7 @@ will be documented in this file
 
 ## 1.7.3 - 2018-11-18
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化多语言文案
 - 优化模块输出方式
@@ -1462,7 +1476,7 @@ will be documented in this file
 - Optimized events system
 - Renamed compiler file
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 `disable_classes` 检测项
 - 内置最新 PHP 版本通知
@@ -1478,7 +1492,7 @@ will be documented in this file
 
 ## 1.7.2 - 2018-10-02
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化 Windows 下获取空闲磁盘空间的方法（感谢 @jfcherng）
 - 增加 php-cs-fixer 对 PHP5.3/7.2 的支持（感谢 @jfcherng）
@@ -1487,7 +1501,7 @@ will be documented in this file
 - Added php-cs-fixer support for PHP5.3/7.2 (contributed by @jfcherng)
 - Added missing type hints for compiler (contributed by @jfcherng)
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复代码缩进异常（感谢 @jfcherng）
 - Fixed abnormal code indentation (contributed by @jfcherng)
@@ -1496,7 +1510,7 @@ will be documented in this file
 
 ## 1.7.1 - 2018-09-18
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 重新设计 I18n 模块
 - 使用 Poedit 进行翻译
@@ -1511,7 +1525,7 @@ will be documented in this file
 
 ## 1.7.0 - 2018-09-05
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 zh-HK 语言
 - 增加浏览器语言信息
@@ -1520,7 +1534,7 @@ will be documented in this file
 - Added browser language information
 - Added SpartanHost benchmarks
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化性能测试描述文本
 - Optimized benchmark description text
@@ -1529,7 +1543,7 @@ will be documented in this file
 
 ## 1.6.1 - 2018-09-03
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修正拼写错误并移除多余尾部空格（感谢 @jfcherng）
 - Fixed a typo and removed unnecessary trailing spaces (contributed by
@@ -1539,14 +1553,14 @@ will be documented in this file
 
 ## 1.6.0 - 2018-09-03
 
-### Add / 新增
+### 新增 / Add
 
 - 新增 PHP 已加载扩展行（感谢 @jfcherng）
 - 新增 zh-TW 语言（感谢 @jfcherng）
 - Added a new row for PHP loaded extensions (contributed by @jfcherng)
 - Added zh-TW language (contributed by @jfcherng)
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 Swoole 扩展检测条件错误（感谢 @jfcherng）
 - Fixed Swoole extension checker condition error (contributed by @jfcherng)
@@ -1555,7 +1569,7 @@ will be documented in this file
 
 ## 1.5.2 - 2018-09-02
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 VPSSERVER 性能测试数据
 - 增加 Amazon 性能测试数据
@@ -1566,7 +1580,7 @@ will be documented in this file
 
 ## 1.5.1 - 2018-07-11
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复标题 JS 错误
 - Fixed title JS error
@@ -1575,7 +1589,7 @@ will be documented in this file
 
 ## 1.5.0 - 2018-07-11
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 Swap 内存动态显示
 - 增加 Bandwagon HOST 性能测试数据
@@ -1584,12 +1598,12 @@ will be documented in this file
 - Added Bandwagon HOST benchmark
 - Added more extension checkers
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复版本更新错误
 - Fixed update version error
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化进度条高值样式
 - 优化链接样式
@@ -1600,19 +1614,19 @@ will be documented in this file
 
 ## 1.4.0 - 2018-06-13
 
-### Add / 新增
+### 新增 / Add
 
 - 增加自动更新功能
 - 增加 RamNode VPS 性能测试数据
 - Added auto-update
 - Added RamNode VPS benchmark points
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复磁盘检测覆盖错误
 - Fixed disk space checker override error
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化头部标题样式
 - Optimized header title style
@@ -1621,7 +1635,7 @@ will be documented in this file
 
 ## 1.3.3 - 2018-03-18
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复性能测试无限循环的问题
 - Fixed benchmark unlimited loop bug
@@ -1630,7 +1644,7 @@ will be documented in this file
 
 ## 1.3.2 - 2018-03-17
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 Apache2.2 时区错误
 - 修复 PHP5.3 中数据库错误
@@ -1641,7 +1655,7 @@ will be documented in this file
 
 ## 1.3.1 - 2018-03-01
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复部分系统磁盘显示错误
 - 修复翻译问题
@@ -1652,7 +1666,7 @@ will be documented in this file
 
 ## 1.3.0 - 2017-12-11
 
-### Add / 新增
+### 新增 / Add
 
 - 增加 Windows 操作系统下的 CPU 使用率
 - 增加腾讯云和 Vultr 服务器性能测试结果
@@ -1669,12 +1683,12 @@ will be documented in this file
 
 ## 1.2.0 - 2017-11-22
 
-### Add / 新增
+### 新增 / Add
 
 - 增加服务器性能测试功能
 - Added server performance benchmark
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 优化图标
 - Optimized icons
@@ -1683,7 +1697,7 @@ will be documented in this file
 
 ## 1.1.1 - 2017-11-10
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 PHP5.3 下的错误
 - Fixed errors in PHP5.3
@@ -1692,19 +1706,19 @@ will be documented in this file
 
 ## 1.1.0 - 2017-11-09
 
-### Add / 新增
+### 新增 / Add
 
 - 增加绝大多数 PHP 数据库扩展检测
 - Added most PHP database checkers
 
-### Optimize / 优化
+### 优化 / Optimize
 
 - 将 Build.php 更名为 compile.php
 - 优化编译器代码
 - Renamed Build.php to compile.php
 - Optimized compiler code
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 `display_errors` 关闭时状态显示为空的问题
 - Fixed PHP `display_errors` showing empty when Off
@@ -1713,7 +1727,7 @@ will be documented in this file
 
 ## 1.0.2 - 2017-10-28
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复 Windows 下 CPU 负载平均值显示错误
 - Fixed CPU load average error on Windows
@@ -1722,7 +1736,7 @@ will be documented in this file
 
 ## 1.0.1 - 2017-10-27
 
-### Fix / 修复
+### 修复 / Fix
 
 - 修复网络统计 TX 数据错误
 - Fixed network stats TX data error
@@ -1731,7 +1745,7 @@ will be documented in this file
 
 ## 1.0.0 - 2017-10-25
 
-### Add / 新增
+### 新增 / Add
 
 - 发布第一个版本 1.0.0
 - Published first version 1.0.0
