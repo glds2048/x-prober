@@ -1,11 +1,11 @@
 import { type FC, type MouseEvent, useCallback, useState } from "react";
-import { Button } from "@/Components/Button/components/index.tsx";
-import { ButtonStatus } from "@/Components/Button/components/types.ts";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { OK } from "@/Components/Rest/http-status.ts";
-import { useToastStore } from "@/Components/Toast/components/store.ts";
-import type { LocationProps } from "./types.ts";
+import { Button } from "@/Components/Button/components/index.js";
+import { ButtonStatus } from "@/Components/Button/components/types.js";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import { useToastStore } from "@/Components/Toast/components/store.js";
+import type { LocationProps } from "./types.js";
 
 export const Location: FC<{
   ip: string;
@@ -22,7 +22,7 @@ export const Location: FC<{
       }
       setLoading(true);
       const { data, status } = await serverFetch<LocationProps>(
-        `locationIpv4&ip=${ip}`,
+        `locationIpv4&ip=${ip}`
       );
       setLoading(false);
       if (data && status === OK) {
@@ -31,7 +31,7 @@ export const Location: FC<{
       }
       open(gettext("Can not fetch location."));
     },
-    [ip, loading, open],
+    [ip, loading, open]
   );
   return (
     <Button

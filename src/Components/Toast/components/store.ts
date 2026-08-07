@@ -1,4 +1,4 @@
-import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
+import { createImmerStore } from "@/Components/Utils/components/store/index.js";
 
 type State = {
   isOpen: boolean;

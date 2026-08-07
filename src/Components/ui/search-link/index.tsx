@@ -1,8 +1,8 @@
 import copy from "copy-to-clipboard";
 import { type FC, type MouseEvent, useCallback } from "react";
 import { useShallow } from "zustand/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { useToastStore } from "@/Components/Toast/components/store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { useToastStore } from "@/Components/Toast/components/store.js";
 import styles from "./index.module.scss";
 
 const SearchButton: FC<{
@@ -26,7 +26,7 @@ export const SearchLinks: FC<{ keywords: string[] }> = ({ keywords }) => {
       copy(e.currentTarget.textContent);
       open(gettext("Copied"));
     },
-    [open],
+    [open]
   );
   return (
     <div className={styles.container}>

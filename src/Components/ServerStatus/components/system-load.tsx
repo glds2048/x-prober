@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { MeterCore } from "@/Components/Meter/components/index.tsx";
-import { template } from "@/Components/Utils/components/template.ts";
-import { useServerStatusStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { MeterCore } from "@/Components/Meter/components/index.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { useServerStatusStore } from "./store.js";
 import styles from "./system-load.module.scss";
 
 export const SysLoadItem: FC<{ load: number; title?: string }> = ({
@@ -43,7 +43,7 @@ export const SystemLoad: FC = () => {
       sysLoad: s.pollData?.sysLoad.join(",") ?? "",
       usage: s.pollData?.cpuUsage.usage ?? 1,
       user: s.pollData?.cpuUsage.user ?? 0.1,
-    })),
+    }))
   );
   const cpuTotal = user + idle + sys;
   const cpuTitle = `

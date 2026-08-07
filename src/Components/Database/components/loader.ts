@@ -1,7 +1,7 @@
-import type { ModuleProps } from "@/Components/Module/components/types.ts";
-import { DATABASE_ID as id } from "./constants.ts";
-import { Database as content } from "./index.tsx";
-import { DatabaseNav as nav } from "./nav.tsx";
+import type { ModuleProps } from "@/Components/Module/components/types.js";
+import { DATABASE_ID as id } from "./constants.js";
+import { Database as content } from "./index.js";
+import { DatabaseNav as nav } from "./nav.js";
 
 export const DatabaseLoader: ModuleProps = {
   content,

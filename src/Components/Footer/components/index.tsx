@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { usePollStore } from "@/Components/Poll/components/store.ts";
-import { template } from "@/Components/Utils/components/template.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { usePollStore } from "@/Components/Poll/components/store.js";
+import { template } from "@/Components/Utils/components/template.js";
 import styles from "./index.module.scss";
 
 export const Footer: FC = () => {
@@ -14,7 +14,7 @@ export const Footer: FC = () => {
         AUTHOR_NAME: s.pollData?.config?.AUTHOR_NAME,
         AUTHOR_URL: s.pollData?.config?.AUTHOR_URL,
         hasConfig: Boolean(s.pollData?.config),
-      })),
+      }))
     );
   if (!hasConfig) {
     return null;
@@ -27,9 +27,8 @@ export const Footer: FC = () => {
           gettext("Generate by {{appName}} and developed by {{authorName}}"),
           {
             appName: `<a href="${APP_URL}" target="_blank">${APP_NAME}</a>`,
-            authorName:
-              `<a href="${AUTHOR_URL}" target="_blank">${AUTHOR_NAME}</a>`,
-          },
+            authorName: `<a href="${AUTHOR_URL}" target="_blank">${AUTHOR_NAME}</a>`,
+          }
         ),
       }}
     />

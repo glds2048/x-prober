@@ -1,11 +1,11 @@
 import type { FC } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { Meter } from "@/Components/Meter/components/index.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { DISK_USAGE_ID } from "./constants.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { Meter } from "@/Components/Meter/components/index.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { DISK_USAGE_ID } from "./constants.js";
 import styles from "./index.module.scss";
-import { useDiskUsageStore } from "./store.ts";
+import { useDiskUsageStore } from "./store.js";
 
 export const DiskUsage: FC = () => {
   const items = useDiskUsageStore(useShallow((s) => s.pollData?.items ?? []));

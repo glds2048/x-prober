@@ -1,10 +1,10 @@
 import { HardDrive } from "lucide-react";
 import { type FC, memo } from "react";
-import type { DiskUsageItemProps } from "@/Components/DiskUsage/components/types.ts";
-import type { PollData } from "@/Components/Poll/components/types.ts";
-import { formatBytes } from "@/Components/Utils/components/format-bytes.ts";
+import type { DiskUsageItemProps } from "@/Components/DiskUsage/components/types.js";
+import type { PollData } from "@/Components/Poll/components/types.js";
+import { formatBytes } from "@/Components/Utils/components/format-bytes.js";
 import styles from "./disk.module.scss";
-import { NodesUsage, NodesUsageLabel, NodesUsageOverview } from "./usage.tsx";
+import { NodesUsage, NodesUsageLabel, NodesUsageOverview } from "./usage.js";
 
 const Disk: FC<DiskUsageItemProps> = memo(({ id, free, total }) => (
   <div className={styles.item} key={id}>

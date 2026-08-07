@@ -1,18 +1,18 @@
 // 1. 导入所有需要同步更新的子 Store
-import { useConfigStore } from "@/Components/Config/store.ts";
-import { useDatabaseStore } from "@/Components/Database/components/store.ts";
-import { useDiskUsageStore } from "@/Components/DiskUsage/components/store.ts";
-import { useMyInfoStore } from "@/Components/MyInfo/components/store.ts";
-import { useNetworkStatsStore } from "@/Components/NetworkStats/components/store.ts";
-import { useNodesStore } from "@/Components/Nodes/components/store.ts";
-import { usePhpExtensionsStore } from "@/Components/PhpExtensions/components/store.ts";
-import { usePhpInfoStore } from "@/Components/PhpInfo/components/store.ts";
-import { useServerInfoStore } from "@/Components/ServerInfo/components/store.ts";
-import { useServerStatusStore } from "@/Components/ServerStatus/components/store.ts";
-import { useTemperatureSensorStore } from "@/Components/TemperatureSensor/components/store.ts";
-import { useUserConfigStore } from "@/Components/UserConfig/store.ts";
-import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
-import type { PollData } from "./types.ts";
+import { useConfigStore } from "@/Components/Config/store.js";
+import { useDatabaseStore } from "@/Components/Database/components/store.js";
+import { useDiskUsageStore } from "@/Components/DiskUsage/components/store.js";
+import { useMyInfoStore } from "@/Components/MyInfo/components/store.js";
+import { useNetworkStatsStore } from "@/Components/NetworkStats/components/store.js";
+import { useNodesStore } from "@/Components/Nodes/components/store.js";
+import { usePhpExtensionsStore } from "@/Components/PhpExtensions/components/store.js";
+import { usePhpInfoStore } from "@/Components/PhpInfo/components/store.js";
+import { useServerInfoStore } from "@/Components/ServerInfo/components/store.js";
+import { useServerStatusStore } from "@/Components/ServerStatus/components/store.js";
+import { useTemperatureSensorStore } from "@/Components/TemperatureSensor/components/store.js";
+import { useUserConfigStore } from "@/Components/UserConfig/store.js";
+import { createImmerStore } from "@/Components/Utils/components/store/index.js";
+import type { PollData } from "./types.js";
 
 type State = {
   pollData: PollData | null;

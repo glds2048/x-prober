@@ -1,19 +1,19 @@
 import { type FC, useEffect, useState } from "react";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { Placeholder } from "@/Components/Placeholder/index.tsx";
-import type { PollData } from "@/Components/Poll/components/types.ts";
-import { OK } from "@/Components/Rest/http-status.ts";
-import { useUpdaterStore } from "@/Components/Updater/components/store.ts";
-import type { FetchStatus } from "@/Components/Utils/components/fetch-status.ts";
-import { template } from "@/Components/Utils/components/template.ts";
-import { UiError } from "@/Components/ui/error/index.tsx";
-import { NodesCpu } from "./cpu.tsx";
-import { NodesDisk } from "./disk.tsx";
-import { NodesNetworkStats } from "./network.tsx";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { Placeholder } from "@/Components/Placeholder/index.js";
+import type { PollData } from "@/Components/Poll/components/types.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import { useUpdaterStore } from "@/Components/Updater/components/store.js";
+import type { FetchStatus } from "@/Components/Utils/components/fetch-status.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { UiError } from "@/Components/ui/error/index.js";
+import { NodesCpu } from "./cpu.js";
+import { NodesDisk } from "./disk.js";
+import { NodesNetworkStats } from "./network.js";
 import styles from "./node.module.scss";
-import { NodesRam } from "./ram.tsx";
-import { NodesSwap } from "./swap.tsx";
+import { NodesRam } from "./ram.js";
+import { NodesSwap } from "./swap.js";
 
 const TIMER = 2000;
 export const Node: FC<{ id: string }> = ({ id }) => {
@@ -36,7 +36,7 @@ export const Node: FC<{ id: string }> = ({ id }) => {
       try {
         const { data, status } = await serverFetch<PollData>(
           `nodes&nodeId=${id}`,
-          { signal: controller.signal },
+          { signal: controller.signal }
         );
         if (!data || status !== OK) {
           setFetchStatus("error");

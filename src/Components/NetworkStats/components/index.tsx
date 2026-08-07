@@ -1,12 +1,12 @@
 import { type FC, useMemo } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { usePrevious } from "@/Components/Utils/components/use-previous.ts";
-import { NETWORK_STATS_ID } from "./constants.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { usePrevious } from "@/Components/Utils/components/use-previous.js";
+import { NETWORK_STATS_ID } from "./constants.js";
 import styles from "./index.module.scss";
-import { NetworksStatsItem } from "./item.tsx";
-import { useNetworkStatsStore } from "./store.ts";
+import { NetworksStatsItem } from "./item.js";
+import { useNetworkStatsStore } from "./store.js";
 
 export const NetworkStats: FC = () => {
   const { networks, networksCount, timestamp } = useNetworkStatsStore(
@@ -14,12 +14,12 @@ export const NetworkStats: FC = () => {
       networks: s.pollData?.networks ?? [],
       networksCount: s.pollData?.networks.length,
       timestamp: s.pollData?.timestamp ?? 0,
-    })),
+    }))
   );
   const sortNetworks = useMemo(
     () =>
       networks.filter(({ tx }) => Boolean(tx)).toSorted((a, b) => a.tx - b.tx),
-    [networks],
+    [networks]
   );
   const prevData = usePrevious({
     items: sortNetworks,

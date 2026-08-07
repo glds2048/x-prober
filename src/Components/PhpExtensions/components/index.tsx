@@ -1,15 +1,15 @@
 import { type FC, memo, useMemo } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { UiMultiColContainer } from "@/Components/ui/col/multi-container.tsx";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.tsx";
-import { EnableStatus } from "@/Components/ui/enable-status/index.tsx";
-import { SearchLinks } from "@/Components/ui/search-link/index.tsx";
-import { PHP_EXTENSIONS_ID } from "./constants.ts";
-import { usePhpExtensionsStore } from "./store.ts";
-import type { PhpExtensionsPollDataProps } from "./types.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { UiMultiColContainer } from "@/Components/ui/col/multi-container.js";
+import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
+import { EnableStatus } from "@/Components/ui/enable-status/index.js";
+import { SearchLinks } from "@/Components/ui/search-link/index.js";
+import { PHP_EXTENSIONS_ID } from "./constants.js";
+import { usePhpExtensionsStore } from "./store.js";
+import type { PhpExtensionsPollDataProps } from "./types.js";
 
 const SHORT_EXTENSION_MAPPING = [
   { key: "curl", name: "cURL" },
@@ -50,14 +50,14 @@ export const PhpExtensions: FC = memo(() => {
       const statusMap: Record<string, boolean> = {};
       for (const { key } of SHORT_EXTENSION_MAPPING) {
         statusMap[key] = Boolean(
-          s.pollData?.[key as keyof PhpExtensionsPollDataProps],
+          s.pollData?.[key as keyof PhpExtensionsPollDataProps]
         );
       }
       return statusMap;
-    }),
+    })
   );
   const loadedExtensionsStr = usePhpExtensionsStore(
-    (s) => s.pollData?.loadedExtensions?.join(",") ?? "",
+    (s) => s.pollData?.loadedExtensions?.join(",") ?? ""
   );
   const sortedShortItems = useMemo(() => {
     if (!extensionStatuses) {

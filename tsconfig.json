@@ -5,8 +5,8 @@
         "./src/*"
       ]
     },
-    "allowImportingTsExtensions": true,
-    "allowJs": false,
+    "allowImportingTsExtensions": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     // "baseUrl": ".",
@@ -22,11 +22,12 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "lib": [
-      "ESNext",
-      "DOM"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "newLine": "LF",
     "noEmit": true,
     "noEmitOnError": true,
@@ -42,7 +43,7 @@
     "strictNullChecks": true,
     "target": "ESNext",
     "types": [
-      "node"
+      "vite/client"
     ],
     "incremental": false,
     "plugins": [

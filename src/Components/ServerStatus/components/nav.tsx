@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { NavItem } from "@/Components/Nav/components/item.tsx";
-import { SERVER_STATUS_ID } from "./constants.ts";
-import { useServerStatusStore } from "./store.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { NavItem } from "@/Components/Nav/components/item.js";
+import { SERVER_STATUS_ID } from "./constants.js";
+import { useServerStatusStore } from "./store.js";
 
 export const ServerStatusNav: FC = () => {
   const hasPollData = useServerStatusStore((s) => Boolean(s.pollData));

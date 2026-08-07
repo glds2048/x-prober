@@ -1,16 +1,16 @@
 import { type FC, useEffect, useMemo, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { Placeholder } from "@/Components/Placeholder/index.tsx";
-import { OK } from "@/Components/Rest/http-status.ts";
-import type { FetchStatus } from "@/Components/Utils/components/fetch-status.ts";
-import { UiError } from "@/Components/ui/error/index.tsx";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { Placeholder } from "@/Components/Placeholder/index.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import type { FetchStatus } from "@/Components/Utils/components/fetch-status.js";
+import { UiError } from "@/Components/ui/error/index.js";
 import styles from "./browsers.module.scss";
-import { BrowserBenchmarkItem } from "./browsers-item.tsx";
-import { BrowserBenchmarkMyBrowser } from "./my-browser.tsx";
-import { useBrowserBenchmarkStore } from "./store.ts";
-import type { BrowserBenchmarkProps } from "./types.ts";
+import { BrowserBenchmarkItem } from "./browsers-item.js";
+import { BrowserBenchmarkMyBrowser } from "./my-browser.js";
+import { useBrowserBenchmarkStore } from "./store.js";
+import type { BrowserBenchmarkProps } from "./types.js";
 
 export const BrowserBenchmarkBrowsers: FC = () => {
   const [status, setStatus] = useState<FetchStatus>("loading");
@@ -21,14 +21,13 @@ export const BrowserBenchmarkBrowsers: FC = () => {
         maxMarks: s.maxMarks,
         setBrowsers: s.setBrowsers,
         setMaxMarks: s.setMaxMarks,
-      })),
+      }))
     );
   useEffect(() => {
     const fetchData = async () => {
       setStatus("loading");
-      const { data, status: httpStatus } = await serverFetch<
-        BrowserBenchmarkProps[]
-      >("browserBenchmarks");
+      const { data, status: httpStatus } =
+        await serverFetch<BrowserBenchmarkProps[]>("browserBenchmarks");
       if (!data?.length || httpStatus !== OK) {
         setStatus("error");
         return;
@@ -40,7 +39,7 @@ export const BrowserBenchmarkBrowsers: FC = () => {
           : 0,
       }));
       const sortedBrowsers = processedBrowsers.toSorted(
-        (a, b) => b.total - a.total,
+        (a, b) => b.total - a.total
       );
       const highestMark = sortedBrowsers[0]?.total ?? 0;
       setBrowsers(sortedBrowsers);
@@ -66,7 +65,7 @@ export const BrowserBenchmarkBrowsers: FC = () => {
             />
           );
         }),
-    [browsers, maxMarks],
+    [browsers, maxMarks]
   );
   return (
     <div className={styles.main}>

@@ -1,5 +1,5 @@
-import { createImmerStore } from "@/Components/Utils/components/store/index.ts";
-import type { ServerBenchmarkProps } from "./types.ts";
+import { createImmerStore } from "@/Components/Utils/components/store/index.js";
+import type { ServerBenchmarkProps } from "./types.js";
 
 type State = {
   benchmarking: boolean;

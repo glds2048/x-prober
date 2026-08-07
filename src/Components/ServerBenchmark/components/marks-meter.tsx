@@ -1,4 +1,4 @@
-import { MeterCore } from "@/Components/Meter/components/index.tsx";
+import { MeterCore } from "@/Components/Meter/components/index.js";
 import styles from "./marks-meter.module.scss";
 
 export const ServerBenchmarkMarksMeter = ({

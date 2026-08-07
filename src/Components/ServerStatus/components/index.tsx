@@ -1,26 +1,24 @@
 import type { FC } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { SERVER_STATUS_ID } from "./constants.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { SERVER_STATUS_ID } from "./constants.js";
 import styles from "./index.module.scss";
-import { MemBuffers } from "./mem-buffers.tsx";
-import { MemCached } from "./mem-cached.tsx";
-import { MemRealUsage } from "./mem-real-usage.tsx";
-import { SwapCached } from "./swap-cached.tsx";
-import { SwapUsage } from "./swap-usage.tsx";
-import { SystemLoad } from "./system-load.tsx";
+import { MemBuffers } from "./mem-buffers.js";
+import { MemCached } from "./mem-cached.js";
+import { MemRealUsage } from "./mem-real-usage.js";
+import { SwapCached } from "./swap-cached.js";
+import { SwapUsage } from "./swap-usage.js";
+import { SystemLoad } from "./system-load.js";
 
 export const ServerStatus: FC = () => (
   <ModuleItem id={SERVER_STATUS_ID} title={gettext("Server Status")}>
     <div className={styles.main}>
-      <div className={styles.modules}>
-        <SystemLoad />
-        <MemRealUsage />
-        <MemCached />
-        <MemBuffers />
-        <SwapUsage />
-        <SwapCached />
-      </div>
+      <SystemLoad />
+      <MemRealUsage />
+      <MemCached />
+      <MemBuffers />
+      <SwapUsage />
+      <SwapCached />
     </div>
   </ModuleItem>
 );

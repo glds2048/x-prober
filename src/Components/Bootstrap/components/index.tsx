@@ -1,20 +1,20 @@
 import "@/Components/Theme/components/config.scss";
 import { type FC, useEffect, useState } from "react";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { Footer } from "@/Components/Footer/components/index.tsx";
-import { Header } from "@/Components/Header/components/index.tsx";
-import type { PollData } from "@/Components/Poll/components/types.ts";
-import { Toast } from "@/Components/Toast/components/index.tsx";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { Footer } from "@/Components/Footer/components/index.js";
+import { Header } from "@/Components/Header/components/index.js";
+import type { PollData } from "@/Components/Poll/components/types.js";
+import { Toast } from "@/Components/Toast/components/index.js";
 import "./global.scss";
-import { gettext } from "@/Components/Language/index.ts";
-import { Modules } from "@/Components/Module/components/index.tsx";
-import { Nav } from "@/Components/Nav/components/index.tsx";
-import { usePollStore } from "@/Components/Poll/components/store.ts";
-import { OK } from "@/Components/Rest/http-status.ts";
-import { useToastStore } from "@/Components/Toast/components/store.ts";
-import { useUpdaterStore } from "@/Components/Updater/components/store.ts";
-import type { FetchStatus } from "@/Components/Utils/components/fetch-status.ts";
-import { BootstrapLoading } from "./loading.tsx";
+import { gettext } from "@/Components/Language/index.js";
+import { Modules } from "@/Components/Module/components/index.js";
+import { Nav } from "@/Components/Nav/components/index.js";
+import { usePollStore } from "@/Components/Poll/components/store.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import { useToastStore } from "@/Components/Toast/components/store.js";
+import { useUpdaterStore } from "@/Components/Updater/components/store.js";
+import type { FetchStatus } from "@/Components/Utils/components/fetch-status.js";
+import { BootstrapLoading } from "./loading.js";
 
 const TIMER = 2000;
 

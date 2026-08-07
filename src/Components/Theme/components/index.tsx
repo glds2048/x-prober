@@ -5,8 +5,8 @@ import {
   useEffect,
   useState,
 } from "react";
-import { WindowConfig } from "@/Components/WindowConfig/components/index.ts";
-import { themes } from "./constants.ts";
+import { WindowConfig } from "@/Components/WindowConfig/components/index.js";
+import { themes } from "./constants.js";
 import styles from "./index.module.scss";
 
 const setThemeAttr = (id: string) => {
@@ -60,8 +60,8 @@ export const Theme: FC = () => {
         // 如果你的 themes 列表中包含一个 id 为 "system" 的按钮，
         // 那么 isActive 直接对比 id === theme 即可。
         // 如果这里只展示具体颜色按钮，则对比当前真正生效的 active 属性：
-        const isActive = id === theme ||
-          (theme === "system" && id === currentActiveId);
+        const isActive =
+          id === theme || (theme === "system" && id === currentActiveId);
 
         return (
           <button

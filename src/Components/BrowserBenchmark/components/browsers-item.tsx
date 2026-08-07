@@ -1,11 +1,11 @@
 import copyToClipboard from "copy-to-clipboard";
 import type { FC, MouseEvent, ReactNode } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { template } from "@/Components/Utils/components/template.ts";
-import { UiRuby } from "@/Components/ui/ruby/index.tsx";
+import { gettext } from "@/Components/Language/index.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { UiRuby } from "@/Components/ui/ruby/index.js";
 import styles from "./browsers-item.module.scss";
-import { BrowserBenchmarkMarksMeter } from "./marks-meter.tsx";
-import type { BrowserBenchmarkMarksProps } from "./types.ts";
+import { BrowserBenchmarkMarksMeter } from "./marks-meter.js";
+import type { BrowserBenchmarkMarksProps } from "./types.js";
 
 const BrowserBenchmarkResult: FC<{
   js: number;
@@ -25,7 +25,7 @@ const BrowserBenchmarkResult: FC<{
       dom: domString,
       js: jsString,
       total: totalString,
-    },
+    }
   );
   const sign = <span className={styles.sign}>+</span>;
   const handleCopyMarks = (e: MouseEvent<HTMLButtonElement>) => {

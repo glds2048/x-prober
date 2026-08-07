@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { usePollStore } from "@/Components/Poll/components/store.ts";
-import type { PollData } from "@/Components/Poll/components/types.ts";
-import { presetModules } from "./preset.ts";
-import { useModuleStore } from "./store.ts";
-import type { ModuleProps } from "./types.ts";
+import { usePollStore } from "@/Components/Poll/components/store.js";
+import type { PollData } from "@/Components/Poll/components/types.js";
+import { presetModules } from "./preset.js";
+import { useModuleStore } from "./store.js";
+import type { ModuleProps } from "./types.js";
 
 export const useAvailableModules = (): ModuleProps[] => {
   const priorities = useModuleStore(useShallow((s) => s.priorities));

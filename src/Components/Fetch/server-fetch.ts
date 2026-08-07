@@ -1,4 +1,4 @@
-import { WindowConfig } from "../WindowConfig/components/index.ts";
+import { WindowConfig } from "../WindowConfig/components/index.js";
 
 type ServerFetchProps<T> = {
   data: T | null;

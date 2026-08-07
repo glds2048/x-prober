@@ -1,4 +1,4 @@
-import type { WindowConfigProps, WindowProps } from "./types.ts";
+import type { WindowConfigProps, WindowProps } from "./types.js";
 export const WindowConfig = {
   AUTHORIZATION: String(
     (window as unknown as WindowProps)?.GLOBAL_CONFIG?.AUTHORIZATION ?? ""

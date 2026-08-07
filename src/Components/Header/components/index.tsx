@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import { Theme } from "@/Components/Theme/components/index.tsx";
+import { Theme } from "@/Components/Theme/components/index.js";
 import styles from "./index.module.scss";
-import { HeaderName } from "./name.tsx";
+import { HeaderName } from "./name.js";
 
 export const Header: FC = () => (
   <div className={styles.main}>

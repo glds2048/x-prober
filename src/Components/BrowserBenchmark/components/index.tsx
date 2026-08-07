@@ -1,9 +1,9 @@
 import { type FC, memo } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { UiDescription } from "@/Components/ui/description/index.tsx";
-import { BrowserBenchmarkBrowsers } from "./browsers.tsx";
-import { BROWSER_BENCHMARK_ID } from "./constants.ts";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { UiDescription } from "@/Components/ui/description/index.js";
+import { BrowserBenchmarkBrowsers } from "./browsers.js";
+import { BROWSER_BENCHMARK_ID } from "./constants.js";
 
 export const BrowserBenchmark: FC = memo(() => (
   <ModuleItem id={BROWSER_BENCHMARK_ID} title={gettext("Browser Benchmark")}>

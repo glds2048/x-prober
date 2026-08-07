@@ -1,8 +1,8 @@
 import { type FC, type MouseEvent, useCallback } from "react";
-import { gettext } from "@/Components/Language/index.ts";
-import { Portal } from "@/Components/Utils/components/portal.tsx";
+import { gettext } from "@/Components/Language/index.js";
+import { Portal } from "@/Components/Utils/components/portal.js";
 import styles from "./index.module.scss";
-import { useToastStore } from "./store.ts";
+import { useToastStore } from "./store.js";
 export const Toast: FC = () => {
   const isOpen = useToastStore((s) => s.isOpen);
   const msg = useToastStore((s) => s.msg);

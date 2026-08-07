@@ -1,17 +1,17 @@
 import { type FC, memo, type ReactElement, type ReactNode } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { Link } from "@/Components/Button/components/index.tsx";
-import { serverFetchRoute } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { ModuleGroup } from "@/Components/Module/components/group.tsx";
-import { ModuleItem } from "@/Components/Module/components/item.tsx";
-import { UiMultiColContainer } from "@/Components/ui/col/multi-container.tsx";
-import { UiSingleColContainer } from "@/Components/ui/col/single-container.tsx";
-import { EnableStatus } from "@/Components/ui/enable-status/index.tsx";
-import { SearchLinks } from "@/Components/ui/search-link/index.tsx";
-import { PHP_INFO_ID } from "./constants.ts";
-import { PhpInfoPhpVersion } from "./php-version.tsx";
-import { usePhpInfoStore } from "./store.ts";
+import { Link } from "@/Components/Button/components/index.js";
+import { serverFetchRoute } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { ModuleGroup } from "@/Components/Module/components/group.js";
+import { ModuleItem } from "@/Components/Module/components/item.js";
+import { UiMultiColContainer } from "@/Components/ui/col/multi-container.js";
+import { UiSingleColContainer } from "@/Components/ui/col/single-container.js";
+import { EnableStatus } from "@/Components/ui/enable-status/index.js";
+import { SearchLinks } from "@/Components/ui/search-link/index.js";
+import { PHP_INFO_ID } from "./constants.js";
+import { PhpInfoPhpVersion } from "./php-version.js";
+import { usePhpInfoStore } from "./store.js";
 
 export const PhpInfo: FC = memo(() => {
   const pollData = usePhpInfoStore(
@@ -34,7 +34,7 @@ export const PhpInfo: FC = memo(() => {
         smtp: s.pollData.smtp,
         uploadMaxFilesize: s.pollData.uploadMaxFilesize,
       };
-    }),
+    })
   );
   if (!pollData) {
     return null;
@@ -74,8 +74,14 @@ export const PhpInfo: FC = memo(() => {
       <EnableStatus isEnable={pollData.smtp} key="smtp" />,
     ],
   ];
-  const sortedFunctions = pollData.disableFunctions.split(",").filter(Boolean).toSorted();
-  const sortedClasses = pollData.disableClasses.split(",").filter(Boolean).toSorted();
+  const sortedFunctions = pollData.disableFunctions
+    .split(",")
+    .filter(Boolean)
+    .toSorted();
+  const sortedClasses = pollData.disableClasses
+    .split(",")
+    .filter(Boolean)
+    .toSorted();
   const longItems: [string, ReactElement][] = [
     [
       gettext("Disabled functions"),

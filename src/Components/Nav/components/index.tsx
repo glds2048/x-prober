@@ -1,5 +1,5 @@
 import { type FC, memo } from "react";
-import { useAvailableModules } from "@/Components/Module/components/use-available-modules.ts";
+import { useAvailableModules } from "@/Components/Module/components/use-available-modules.js";
 import styles from "./index.module.scss";
 
 export const Nav: FC = memo(() => {

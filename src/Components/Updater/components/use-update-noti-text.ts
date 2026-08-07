@@ -1,8 +1,8 @@
 import { useShallow } from "zustand/react/shallow";
-import { useConfigStore } from "@/Components/Config/store.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { template } from "@/Components/Utils/components/template.ts";
-import { useUpdaterStore } from "./store.ts";
+import { useConfigStore } from "@/Components/Config/store.js";
+import { gettext } from "@/Components/Language/index.js";
+import { template } from "@/Components/Utils/components/template.js";
+import { useUpdaterStore } from "./store.js";
 
 export const useUpdateNotiText = (): string => {
   const { isUpdating, hasUpdateError, targetVersion } = useUpdaterStore(

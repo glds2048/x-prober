@@ -1,5 +1,5 @@
-import { createStore } from "../Utils/components/store/index.ts";
-import type { UserConfigProps } from "./types.ts";
+import { createStore } from "../Utils/components/store/index.js";
+import type { UserConfigProps } from "./types.js";
 
 type State = {
   pollData: UserConfigProps | null;

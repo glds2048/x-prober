@@ -1,10 +1,10 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { type FC, type MouseEvent, useCallback } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { gettext } from "@/Components/Language/index.ts";
+import { gettext } from "@/Components/Language/index.js";
 import styles from "./arrow.module.scss";
-import { useModuleStore } from "./store.ts";
-import { useAvailableModules } from "./use-available-modules.ts";
+import { useModuleStore } from "./store.js";
+import { useAvailableModules } from "./use-available-modules.js";
 
 export const ModuleArrow: FC<{
   isDown: boolean;
@@ -17,7 +17,7 @@ export const ModuleArrow: FC<{
       moveDown: s.moveDown,
       moveUp: s.moveUp,
       // priorities: s.priorities,
-    })),
+    }))
   );
   // const availablePriorities = pollData
   //   ? priorities.filter((n) => Object.hasOwn(pollData, n))
@@ -37,7 +37,7 @@ export const ModuleArrow: FC<{
       }
       moveUp(moduleId);
     },
-    [isDown, moveDown, moveUp, moduleId],
+    [isDown, moveDown, moveUp, moduleId]
   );
   return (
     <button

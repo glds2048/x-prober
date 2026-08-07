@@ -1,7 +1,7 @@
-import type { ModuleProps } from "@/Components/Module/components/types.ts";
-import { NETWORK_STATS_ID as id } from "./constants.ts";
-import { NetworkStats as content } from "./index.tsx";
-import { NetworkStatsNav as nav } from "./nav.tsx";
+import type { ModuleProps } from "@/Components/Module/components/types.js";
+import { NETWORK_STATS_ID as id } from "./constants.js";
+import { NetworkStats as content } from "./index.js";
+import { NetworkStatsNav as nav } from "./nav.js";
 
 export const NetworkStatsLoader: ModuleProps = {
   content,

@@ -1,12 +1,12 @@
 import { type FC, useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { useConfigStore } from "@/Components/Config/store.ts";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { OK } from "@/Components/Rest/http-status.ts";
-import { useUpdaterStore } from "@/Components/Updater/components/store.ts";
-import { UpdaterLink } from "@/Components/Updater/components/updater-link.tsx";
-import { versionCompare } from "@/Components/Utils/components/version-compare.ts";
-import { HeaderLink } from "./link.tsx";
+import { useConfigStore } from "@/Components/Config/store.js";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import { useUpdaterStore } from "@/Components/Updater/components/store.js";
+import { UpdaterLink } from "@/Components/Updater/components/updater-link.js";
+import { versionCompare } from "@/Components/Utils/components/version-compare.js";
+import { HeaderLink } from "./link.js";
 import styles from "./name.module.scss";
 
 export const HeaderName: FC = () => {
@@ -16,13 +16,13 @@ export const HeaderName: FC = () => {
       APP_URL: s.pollData?.APP_URL,
       APP_VERSION: s.pollData?.APP_VERSION,
       hasPollData: Boolean(s.pollData),
-    })),
+    }))
   );
   const { setTargetVersion, targetVersion } = useUpdaterStore(
     useShallow((s) => ({
       setTargetVersion: s.setTargetVersion,
       targetVersion: s.targetVersion,
-    })),
+    }))
   );
   // fetch new version
   useEffect(() => {
@@ -45,15 +45,16 @@ export const HeaderName: FC = () => {
   }
   return (
     <h1 className={styles.main}>
-      {targetVersion && APP_VERSION &&
-          versionCompare(APP_VERSION, targetVersion) < 0
-        ? <UpdaterLink />
-        : (
-          <HeaderLink href={APP_URL} rel="noreferrer" target="_blank">
-            <span className={styles.name}>{APP_NAME}</span>
-            <span className={styles.version}>{APP_VERSION}</span>
-          </HeaderLink>
-        )}
+      {targetVersion &&
+      APP_VERSION &&
+      versionCompare(APP_VERSION, targetVersion) < 0 ? (
+        <UpdaterLink />
+      ) : (
+        <HeaderLink href={APP_URL} rel="noreferrer" target="_blank">
+          <span className={styles.name}>{APP_NAME}</span>
+          <span className={styles.version}>{APP_VERSION}</span>
+        </HeaderLink>
+      )}
     </h1>
   );
 };

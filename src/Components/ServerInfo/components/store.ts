@@ -1,5 +1,5 @@
-import { createStore } from "@/Components/Utils/components/store/index.ts";
-import type { ServerInfoPollDataProps } from "./types.ts";
+import { createStore } from "@/Components/Utils/components/store/index.js";
+import type { ServerInfoPollDataProps } from "./types.js";
 
 type State = {
   pollData: ServerInfoPollDataProps | null;

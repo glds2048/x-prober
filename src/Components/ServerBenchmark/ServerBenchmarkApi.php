@@ -135,7 +135,7 @@ class ServerBenchmarkApi
 
     private static function cooldown()
     {
-        return (int) UserConfigApi::get('serverBenchmarkCd') ?: 60;
+        return (int) UserConfigApi::get(ServerBenchmarkConstants::COOLDOWN_ID) ?: 60;
     }
 
     private static function getRecorder()
@@ -163,12 +163,19 @@ class ServerBenchmarkApi
         return array_merge($defaults, $data);
     }
 
-    private static function getMedian(array $arr)
+    private static function getMedian(array $arr): float
     {
-        $count = \count($arr);
-        sort($arr);
-        $mid = floor(($count - 1) / 2);
+        if (!$arr) {
+            throw new \InvalidArgumentException('Cannot compute median of empty array');
+        }
 
-        return ($arr[$mid] + $arr[$mid + 1 - $count % 2]) / 2;
+        $sort = $arr;
+        sort($sort);
+        $count = count($sort);
+        $mid   = intdiv($count, 2);
+
+        return $count % 2
+            ? (float) $sort[$mid]
+            : ($sort[$mid - 1] + $sort[$mid]) / 2;
     }
 }

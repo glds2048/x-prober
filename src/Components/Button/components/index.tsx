@@ -1,7 +1,7 @@
 import { AlertTriangle, LoaderPinwheel, Pointer, X } from "lucide-react";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from "react";
 import styles from "./index.module.scss";
-import { ButtonStatus, type ButtonStatusValue } from "./types.ts";
+import { ButtonStatus, type ButtonStatusValue } from "./types.js";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   status?: ButtonStatusValue;

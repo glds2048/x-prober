@@ -1,17 +1,17 @@
 import { DownloadCloud, Link } from "lucide-react";
 import { type FC, useEffect, useMemo, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { serverFetch } from "@/Components/Fetch/server-fetch.ts";
-import { gettext } from "@/Components/Language/index.ts";
-import { Placeholder } from "@/Components/Placeholder/index.tsx";
-import { OK } from "@/Components/Rest/http-status.ts";
-import type { FetchStatus } from "@/Components/Utils/components/fetch-status.ts";
-import { UiError } from "@/Components/ui/error/index.tsx";
-import { ServerBenchmarkMyServer } from "./my-server.tsx";
-import { ServerBenchmarkItem } from "./server-item.tsx";
+import { serverFetch } from "@/Components/Fetch/server-fetch.js";
+import { gettext } from "@/Components/Language/index.js";
+import { Placeholder } from "@/Components/Placeholder/index.js";
+import { OK } from "@/Components/Rest/http-status.js";
+import type { FetchStatus } from "@/Components/Utils/components/fetch-status.js";
+import { UiError } from "@/Components/ui/error/index.js";
+import { ServerBenchmarkMyServer } from "./my-server.js";
+import { ServerBenchmarkItem } from "./server-item.js";
 import styles from "./servers.module.scss";
-import { useServerBenchmarkStore } from "./store.ts";
-import type { ServerBenchmarkProps } from "./types.ts";
+import { useServerBenchmarkStore } from "./store.js";
+import type { ServerBenchmarkProps } from "./types.js";
 
 export const ServerBenchmarkServers: FC = () => {
   const [fetchStatus, setFetchStatus] = useState<FetchStatus>("loading");
@@ -22,14 +22,13 @@ export const ServerBenchmarkServers: FC = () => {
         servers: s.servers,
         setMaxMarks: s.setMaxMarks,
         setServers: s.setServers,
-      })),
+      }))
     );
   useEffect(() => {
     const fetchData = async () => {
       setFetchStatus("loading");
-      const { data, status } = await serverFetch<ServerBenchmarkProps[]>(
-        "benchmarkServers",
-      );
+      const { data, status } =
+        await serverFetch<ServerBenchmarkProps[]>("benchmarkServers");
       if (!data?.length || status !== OK) {
         setFetchStatus("error");
         return;
@@ -56,32 +55,28 @@ export const ServerBenchmarkServers: FC = () => {
         // 这里的断言是安全的，因为上面 filter 过了
         const { cpu = 0, read = 0, write = 0 } = detail;
 
-        const proberLink = probeUrl
-          ? (
-            <a
-              className={styles.link}
-              href={probeUrl}
-              rel="noreferrer"
-              target="_blank"
-              title={gettext("Visit probe page")}
-            >
-              <Link />
-            </a>
-          )
-          : null;
-        const binLink = binUrl
-          ? (
-            <a
-              className={styles.link}
-              href={binUrl}
-              rel="noreferrer"
-              target="_blank"
-              title={gettext("Download speed test")}
-            >
-              <DownloadCloud />
-            </a>
-          )
-          : null;
+        const proberLink = probeUrl ? (
+          <a
+            className={styles.link}
+            href={probeUrl}
+            rel="noreferrer"
+            target="_blank"
+            title={gettext("Visit probe page")}
+          >
+            <Link />
+          </a>
+        ) : null;
+        const binLink = binUrl ? (
+          <a
+            className={styles.link}
+            href={binUrl}
+            rel="noreferrer"
+            target="_blank"
+            title={gettext("Download speed test")}
+          >
+            <DownloadCloud />
+          </a>
+        ) : null;
         const title = (
           <a
             className={styles.title}
