@@ -51,7 +51,7 @@ final class TemperatureSensorPoll
     private function getItems()
     {
         $items = [];
-        $urls = UserConfigApi::get('temperatureSensors') ?: [];
+        $urls = UserConfigApi::get(TemperatureSensorConstants::ID) ?: [];
         if (!$urls) {
             return [];
         }
