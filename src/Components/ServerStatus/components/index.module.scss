@@ -1,9 +1,6 @@
 .main {
   display: grid;
-  gap: var(--x-gutter-sm);
-}
-.modules {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--x-column-min-width), 1fr));
-  gap: var(--x-gutter);
+  column-gap: var(--x-gutter-sm);
+  row-gap: var(--x-gutter);
 }

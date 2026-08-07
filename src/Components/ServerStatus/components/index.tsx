@@ -13,14 +13,12 @@ import { SystemLoad } from "./system-load.js";
 export const ServerStatus: FC = () => (
   <ModuleItem id={SERVER_STATUS_ID} title={gettext("Server Status")}>
     <div className={styles.main}>
-      <div className={styles.modules}>
-        <SystemLoad />
-        <MemRealUsage />
-        <MemCached />
-        <MemBuffers />
-        <SwapUsage />
-        <SwapCached />
-      </div>
+      <SystemLoad />
+      <MemRealUsage />
+      <MemCached />
+      <MemBuffers />
+      <SwapUsage />
+      <SwapCached />
     </div>
   </ModuleItem>
 );
